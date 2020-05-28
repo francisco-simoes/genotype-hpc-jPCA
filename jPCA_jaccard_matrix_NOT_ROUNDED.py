@@ -26,7 +26,7 @@ print("\n------ Importing the genotype matrix ---------")
 N = jPCA_settings.N
 
 # Loading the matrix, already rounded and without NAs.
-MATRIX = np.load('/hpc/hers_en/fsimoes/logs/objects/rounded_no_NAs_matrix_N={}.npy'.format( N))
+MATRIX = np.load('/hpc/hers_en/fsimoes/logs/objects/NOT_rounded_no_NAs_matrix_N={}.npy'.format( N))
 print('Matrix shape:', MATRIX.shape)
 
 ## Create dataframe
@@ -62,12 +62,12 @@ for i in range(pop_size):
 plt.figure()
 plt.imshow(sim_matrix, cmap='hot')
 plt.colorbar()
-plt.title('Similarity matrix colormap with N={}'.format(N))
-plt.savefig('/hpc/hers_en/fsimoes/logs/images/Generalized_Jaccard_scores_matrix_N={}.png'.format(N))
+plt.title('NOT rounded Similarity matrix colormap with N={}'.format(N))
+plt.savefig('/hpc/hers_en/fsimoes/logs/images/NOT_ROUNDED_Generalized_Jaccard_scores_matrix_N={}.png'.format(N))
 #plt.show()
 
 # Save the similarity matrix in a file.
-np.save('/hpc/hers_en/fsimoes/logs/objects/jaccard_matrix_N={}.npy'.format(N), sim_matrix)
+np.save('/hpc/hers_en/fsimoes/logs/objects/NOT_ROUNDED_jaccard_matrix_N={}.npy'.format(N), sim_matrix)
 
 # Print corners of similarity matrix for debugging:
 print('Upper left OG sim matrix corner:', sim_matrix[:10,:10])

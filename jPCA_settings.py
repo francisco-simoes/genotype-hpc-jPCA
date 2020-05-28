@@ -11,6 +11,7 @@ N = 100
 # For jaccard matrix generation:
 matrix_file = '/hpc/hers_en/fsimoes/jPCA/indiv_counts_LOF_maf001_exQCpass_merged.txt'
 new_file_prefix = 'No_NAs_LOF_matrix'
+NOT_rounded_new_file_prefix = 'NOT_ROUNDED_No_NAs_LOF_matrix'
 
 # For histogram generation:
 #Nothing extra is needed.
