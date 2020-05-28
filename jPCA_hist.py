@@ -33,10 +33,10 @@ print('lower left corner imported sim matrix:', sim_matrix[-10:,-10:])
 flat_sim_matrix = np.ndarray.flatten(sim_matrix) # Reduce to 1D.
 
 # Histogram of the scores:
-#plt.figure()
-#plt.hist(flat_sim_matrix)
-#plt.title('Generalized Jaccard scores for N={}'.format(N))
-#plt.savefig('/hpc/hers_en/fsimoes/logs/images/Histogram_Jaccard_scores_for_N={}.png'.format(N))
+plt.figure()
+plt.hist(flat_sim_matrix)
+plt.title('Generalized Jaccard scores for N={}'.format(N))
+plt.savefig('/hpc/hers_en/fsimoes/logs/images/Histogram_Jaccard_scores_for_N={}.png'.format(N))
 #plt.show()
 
 ##########################################

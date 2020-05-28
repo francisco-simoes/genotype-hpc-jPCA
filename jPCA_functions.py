@@ -28,7 +28,10 @@ def generalized_jaccard_score(a1, a2): # From the Jaccard Gaussian simulation I 
     positive_total = np.count_nonzero(bool_a1 | bool_a2) # | uses or on each array index.
 
     # The score:
-    ratio = positive_intersection / positive_total
+    if positive_total == 0: # If there are no positive entries where a1 and a2 coincide: set J to 0.
+        ratio = 0
+    else:
+        ratio = positive_intersection / positive_total
     return ratio
 
 # Function to remove NAs and select only some rows. Also eliminated the first row (with the gene names).

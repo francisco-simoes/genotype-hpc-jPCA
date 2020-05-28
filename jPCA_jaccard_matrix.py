@@ -22,13 +22,11 @@ print("\n------ Importing the genotype matrix ---------")
 # Matrix has 12803 columns (genes) and 30821 rows (30820 individuals and the first row has the gene names; 12802 burdens and the first column has sample tags).
 #       (Numbers obtained by simply running ```head --lines=1 indiv_counts_LOF_maf001_exQCpass_merged.txt | wc``` and ```wc -l indiv_counts_LOF_maf001_exQCpass_merged.txt```.)
 
-# Parameters from settings file
+# Needed parameters from settings file
 N = jPCA_settings.N
-matrix_file = jPCA_settings.matrix_file
-new_file_prefix = jPCA_settings.new_file_prefix
 
-#NAs_to_zeros(matrix_file, new_file_prefix, N) # Uncomment to create file with no_NAs matrix.
-MATRIX = get_matrix(new_file_prefix, N)
+# Loading the matrix, already rounded and without NAs.
+MATRIX = np.load('/hpc/hers_en/fsimoes/logs/objects/rounded_no_NAs_matrix_N={}.npy'.format( N))
 print('Matrix shape:', MATRIX.shape)
 
 ## Create dataframe
@@ -61,11 +59,11 @@ for i in range(pop_size):
         sim_matrix[i,j] = generalized_jaccard_score(individual_i, individual_j)
         sim_matrix[j,i] = sim_matrix[i,j] # Matrix is symmetric.
 
-#plt.figure()
-#plt.imshow(sim_matrix, cmap='hot')
-#plt.colorbar()
-#plt.title('Similarity matrix colormap')
-#plt.savefig('/hpc/hers_en/fsimoes/logs/images/Generalized_Jaccard_scores_matrix_N={}.png'.format(N))
+plt.figure()
+plt.imshow(sim_matrix, cmap='hot')
+plt.colorbar()
+plt.title('Similarity matrix colormap')
+plt.savefig('/hpc/hers_en/fsimoes/logs/images/Generalized_Jaccard_scores_matrix_N={}.png'.format(N))
 #plt.show()
 
 # Save the similarity matrix in a file.
