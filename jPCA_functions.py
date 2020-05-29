@@ -51,7 +51,7 @@ def NAs_to_zeros(matrix_file, new_file_prefix, N): # Similar to the function I u
             first_lines[i] = line.split("\t",1)[1] # Eliminates first word (until the first tab \t).
 
     # Create file with the first N lines of the matrix, with NAs replaced by 0s.
-    new_file = open('{}_N={}.txt'.format(new_file_prefix, N), 'w') # Create file, or empty it if it already exists.
+    new_file = open('/hpc/hers_en/fsimoes/logs/objects/{}_N={}.txt'.format(new_file_prefix, N), 'w') # Create file, or empty it if it already exists.
     for line in first_lines:
         new_line = line.replace('NA', '0')
         new_file.write(new_line) # Append line to bottom of new_file.

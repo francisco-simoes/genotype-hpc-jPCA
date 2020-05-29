@@ -5,4 +5,4 @@ echo 'Generating Jaccard similarity matrix and heatmap...'
 python3 /hpc/hers_en/fsimoes/jPCA/jPCA_jaccard_matrix_NOT_ROUNDED.py
 
 echo 'Generating Jaccard histogram...'
-python3 /hpc/hers_en/fsimoes/jPCA/jPCA_hist.py
+python3 /hpc/hers_en/fsimoes/jPCA/jPCA_hist_NOT_ROUNDED.py
