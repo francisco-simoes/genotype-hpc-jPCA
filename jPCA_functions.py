@@ -66,6 +66,6 @@ def get_matrix(new_file_prefix, N): # Similar to the function I used on the toy 
     ------------
     Returns: MATRIX - a numpy array with the first N lines of the matrix, with the NAs removed.
     '''
-    MATRIX = np.loadtxt('{}_N={}.txt'.format(new_file_prefix, N))
+    MATRIX = np.loadtxt('/hpc/hers_en/fsimoes/logs/objects/{}_N={}.txt'.format(new_file_prefix, N))
     return MATRIX
 

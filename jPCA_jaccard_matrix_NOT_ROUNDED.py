@@ -24,9 +24,10 @@ print("\n------ Importing the genotype matrix ---------")
 
 # Needed parameters from settings file
 N = jPCA_settings.N
+new_file_prefix = jPCA_settings.NOT_rounded_new_file_prefix
 
 # Loading the matrix, already rounded and without NAs.
-MATRIX = np.load('/hpc/hers_en/fsimoes/logs/objects/NOT_rounded_no_NAs_matrix_N={}.npy'.format( N))
+MATRIX = np.load('/hpc/hers_en/fsimoes/logs/objects/{}_N={}.npy'.format(new_file_prefix, N))
 print('Matrix shape:', MATRIX.shape)
 
 ## Create dataframe

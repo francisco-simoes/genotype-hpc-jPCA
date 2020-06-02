@@ -20,4 +20,4 @@ MATRIX = get_matrix(new_file_prefix, N)
 MATRIX = np.rint(MATRIX)
 
 # Save matrix as .npy file:
-np.save('/hpc/hers_en/fsimoes/logs/objects/rounded_no_NAs_matrix_N={}.npy'.format(N), MATRIX)
+np.save('/hpc/hers_en/fsimoes/logs/objects/{}_N={}.npy'.format(new_file_prefix, N), MATRIX)
