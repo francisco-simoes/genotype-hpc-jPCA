@@ -34,9 +34,12 @@ flat_sim_matrix = np.ndarray.flatten(sim_matrix) # Reduce to 1D.
 
 # Histogram of the scores:
 plt.figure()
+#axes limits must be adapted to each case!:
+plt.xlim(0, 0.1)
+plt.ylim(0, 1.5)
 #plt.hist(flat_sim_matrix, bins=100) #10 bins just between 0 and 0.1.
-#plt.hist(flat_sim_matrix, bins=1000) #100 bins just between 0 and 0.1.
-plt.hist(flat_sim_matrix, bins=10000) #1000 bins just between 0 and 0.1.
+plt.hist(flat_sim_matrix, bins=1000) #100 bins just between 0 and 0.1.
+#plt.hist(flat_sim_matrix, bins=10000) #1000 bins just between 0 and 0.1.
 plt.title('Generalized Jaccard scores for N={}'.format(N))
 plt.savefig('/hpc/hers_en/fsimoes/logs/images/EXTRA_BINS_Histogram_Jaccard_scores_for_N={}.png'.format(N))
 #plt.show()
