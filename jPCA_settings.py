@@ -3,9 +3,9 @@ Settings for the jPCA scripts.
 '''
 
 # General:
-#N = 30820
+N = 30820
 #N = 200
-N = 100
+#N = 100
 
 # [Change if other data is used!]:
 # For jaccard matrix generation:

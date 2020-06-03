@@ -52,7 +52,14 @@ print('\n\nLoading vectors:\n{}'.format(loadings))
 # Get PC scores:
 #(The PC scores give us the projections of the data points onto the PCs).
 pc_scores_list = ['PC{}_score'.format(i+1) for i in range(loadings_matrix.shape[1])]
-scores_matrix = PCA().fit_transform(scaled_df) # One row for each sample; one column for each PC.
+#scores_matrix = PCA().fit_transform(scaled_df) # One row for each sample; one column for each PC.
+
+#
+#(Use incremental PCA instead:)
+ipca = IncrementalPCA(batch_size=100) #(eye-balled value...)
+scores_matrix = ipca.fit_transform(scaled_df) # One row for each sample; one column for each PC.
+#
+
 scores = pd.DataFrame(scores_matrix, index=scaled_df.index, columns=pc_scores_list)
 print('\n\nScores (head):\n{}'.format(scores.head()))
 
