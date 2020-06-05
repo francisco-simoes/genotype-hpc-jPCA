@@ -9,7 +9,7 @@ import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 #import seaborn as sns
-from sklearn.decomposition import PCA, IncrementalPCA
+from sklearn.decomposition import PCA
 from sklearn.preprocessing import scale
 
 #plt.ion() # script will continue running after show().
@@ -17,6 +17,7 @@ plt.style.use('seaborn-white')
 
 # Import settings and similarity matrix:
 N = jPCA_settings.N
+n_components = jPCA_settings.n_components
 MATRIX = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_matrix_N={}.npy'.format(N))
 print('Similarity matrix shape:', MATRIX.shape)
 
@@ -39,10 +40,10 @@ print('\n\nScaled data description:\n{}'.format(scaled_df.iloc[:,:5].describe())
 #There are min(p, n-1) PCs, where n = {# of samples}.
 #In this case, then: {# PCs} = 100-1.
 #
+fitted = PCA(n_components=n_components, svd_solver='arpack').fit(scaled_df)
 #Get loading vectors: 
-loadings_matrix = PCA().fit(scaled_df).components_.T #Each column contains one loading vector.
+loadings_matrix = fitted.components_.T #Each column contains one loading vector.
 print(loadings_matrix.shape)
-# ???: Shouldn't it be (..., 99) instead of (..., 100)?
 
 loading_vectors_list = ['phi_{}'.format(i+1) for i in range(loadings_matrix.shape[1])]
 loadings = pd.DataFrame(loadings_matrix, index=df.columns, columns=loading_vectors_list)
@@ -53,12 +54,7 @@ print('\n\nLoading vectors:\n{}'.format(loadings))
 #(The PC scores give us the projections of the data points onto the PCs).
 pc_scores_list = ['PC{}_score'.format(i+1) for i in range(loadings_matrix.shape[1])]
 #scores_matrix = PCA().fit_transform(scaled_df) # One row for each sample; one column for each PC.
-
-#
-#(Use incremental PCA instead:)
-ipca = IncrementalPCA(batch_size=100) #(eye-balled value...)
-scores_matrix = ipca.fit_transform(scaled_df) # One row for each sample; one column for each PC.
-#
+scores_matrix = fitted.fit_transform(scaled_df) # One row for each sample; one column for each PC.
 
 scores = pd.DataFrame(scores_matrix, index=scaled_df.index, columns=pc_scores_list)
 print('\n\nScores (head):\n{}'.format(scores.head()))
@@ -83,7 +79,6 @@ plt.savefig('/hpc/hers_en/fsimoes/logs/images/PCs_N={}.png'.format(N))
 
 
 # Explained variance plot
-fitted = PCA().fit(scaled_df)
 print('\n\nPVEs:\n{}'.format(fitted.explained_variance_ratio_))
 
 plt.figure(figsize=(7,7))

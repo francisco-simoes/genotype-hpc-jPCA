@@ -34,9 +34,9 @@ flat_sim_matrix = np.ndarray.flatten(sim_matrix) # Reduce to 1D.
 
 # Histogram of the scores:
 plt.figure()
-#axes limits must be adapted to each case!:
-plt.xlim(0, 0.1)
-plt.ylim(0, 1.5)
+#xlimit must be adapted to each case!:
+plt.xlim(0, 0.05)
+plt.ylim(0, 50000000)
 #plt.hist(flat_sim_matrix, bins=100) #10 bins just between 0 and 0.1.
 plt.hist(flat_sim_matrix, bins=1000) #100 bins just between 0 and 0.1.
 #plt.hist(flat_sim_matrix, bins=10000) #1000 bins just between 0 and 0.1.
