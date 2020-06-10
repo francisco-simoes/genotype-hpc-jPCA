@@ -18,5 +18,5 @@ NOT_rounded_new_file_prefix = 'NOT_ROUNDED_No_NAs_LOF_matrix'
 #Nothing extra is needed.
 
 # For PCA:
-#n_components = 10
-n_components = 100
+n_components = 10
+#n_components = 100

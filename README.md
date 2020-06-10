@@ -23,7 +23,11 @@ All pipelines follow the same format:
 - Genotype diagnostics file: prints useful values like percentage of zeros before and after rounding.
 
 
+# Why do we check the univariate Gaussianity of J(i,j)?
 
-	
-
-
+- Every individual's burden can be seen as a random variable equal to any other individual's burden.
+- Hence each entry of the similarity matrix (each Jaccard value) can be seen as a random variable coming from the same distribution.
+- This means that we can get a visual representation of the distribution by simply using all the Jaccard values, as if they were the same random variable... because they are!
+- Multivariate Gaussianity is not necessary, but it is sufficient, for two of the PCA assumptions to be satisfied: linearity and orthogonality of principal components.
+- It is important to note that Gaussianity of some variables does not mean that the multivariate distribution is Gaussian! (Did not get the intuition behind this yet). However, if the variables are independent (as in our case) then this is true, *I think*. So it does make sense to look at the Gaussianity of all J(i,j) to conclude that the multivariate distribution for the random vector $(J(i,j))_{i,j}$ is indeed multivariate Gaussian.
+- Notice that our problem can reside in the third assumption of PCA (when used for dimensionality reduction): that most of the variance of the data resides in a low dimensional subspace of the sample space. And this actually seems to fail.

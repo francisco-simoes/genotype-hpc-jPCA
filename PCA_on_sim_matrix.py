@@ -55,6 +55,8 @@ print('\n\nLoading vectors:\n{}'.format(loadings))
 pc_scores_list = ['PC{}_score'.format(i+1) for i in range(loadings_matrix.shape[1])]
 #scores_matrix = PCA().fit_transform(scaled_df) # One row for each sample; one column for each PC.
 scores_matrix = fitted.fit_transform(scaled_df) # One row for each sample; one column for each PC.
+#Save it in .npy file.
+np.save('/hpc/hers_en/fsimoes/logs/objects/PCA_scores_matrix_N={}.npy'.format(N), scores_matrix)
 
 scores = pd.DataFrame(scores_matrix, index=scaled_df.index, columns=pc_scores_list)
 print('\n\nScores (head):\n{}'.format(scores.head()))
