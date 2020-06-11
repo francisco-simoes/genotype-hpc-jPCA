@@ -31,3 +31,8 @@ All pipelines follow the same format:
 - Multivariate Gaussianity is not necessary, but it is sufficient, for two of the PCA assumptions to be satisfied: linearity and orthogonality of principal components.
 - It is important to note that Gaussianity of some variables does not mean that the multivariate distribution is Gaussian! (Did not get the intuition behind this yet). However, if the variables are independent (as in our case) then this is true, *I think*. So it does make sense to look at the Gaussianity of all J(i,j) to conclude that the multivariate distribution for the random vector $(J(i,j))_{i,j}$ is indeed multivariate Gaussian.
 - Notice that our problem can reside in the third assumption of PCA (when used for dimensionality reduction): that most of the variance of the data resides in a low dimensional subspace of the sample space. And this actually seems to fail.
+
+# Cohort counts and ratios
+
+- The two peaks of the histogram could come from unbalanced representation of different cohorts on each peak.
+- I tested this, and it is not true: look at the cohort ratio log to verify this: for every cohort/country, its ratio on each section of the histogram is approximately the same.
