@@ -17,14 +17,12 @@ All pipelines follow the same format:
 	- One with rounding and extra bins in the histogram.
 
 # Auxiliary modules:
-
 - Settings file: contains the parameters used in the scripts of the pipeline, so that we don't have to chance them separately.
 - Functions file: contains the functions we use in the scripts of the pipeline.
 - Genotype diagnostics file: prints useful values like percentage of zeros before and after rounding.
 
 
 # Why do we check the univariate Gaussianity of J(i,j)?
-
 - Every individual's burden can be seen as a random variable equal to any other individual's burden.
 - Hence each entry of the similarity matrix (each Jaccard value) can be seen as a random variable coming from the same distribution.
 - This means that we can get a visual representation of the distribution by simply using all the Jaccard values, as if they were the same random variable... because they are!
@@ -33,6 +31,9 @@ All pipelines follow the same format:
 - Notice that our problem can reside in the third assumption of PCA (when used for dimensionality reduction): that most of the variance of the data resides in a low dimensional subspace of the sample space. And this actually seems to fail.
 
 # Cohort counts and ratios
-
 - The two peaks of the histogram could come from unbalanced representation of different cohorts on each peak.
 - I tested this, and it is not true: look at the cohort ratio log to verify this: for every cohort/country, its ratio on each section of the histogram is approximately the same.
+
+# Pheno counts and ratios
+- The two peaks of the histogram could come from unbalanced representation of different phenos (0 or 1) on each peak.
+- I tested this, and it is not true: look at the pheno ratio log to verify this: for every pheno, its ratio on each section of the histogram is approximately the same.
