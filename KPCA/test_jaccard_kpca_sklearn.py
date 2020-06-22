@@ -2,6 +2,9 @@
 jPCA as KPCA with a Jaccard kernel on the typical KPCA toy model with circles, using KernelPCA from sklearn.
 Naturally the result will be bad (most pairs of points have Jaccard scores of zero), but I want to make sure the code runs.
 '''
+import sys
+sys.path.append('/hpc/hers_en/fsimoes/jPCA')
+
 import numpy as np
 import matplotlib.pyplot as plt
 
