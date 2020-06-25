@@ -4,10 +4,9 @@
 
 # input data files
 gdb="/hpc/hers_en/shared/wxs/mine_wxs_180919/gdb/mine_wxs_180919.gdb" # our in-house format for genetic data, based on sqlite db
-varSet=read.table("/hpc/hers_en/shared/wxs/mine_wxs_180919/varSets/moderate.exQCpass.txt.gz") # A table listing all protein altering variants detected in each gene. Each gene is one row, you can split this file to generate separate target files and then use a job array to have the cluster distribute analyses of different genes to different nodes before aggregating and doing PCA
-
+#varSet=read.table("/hpc/hers_en/shared/wxs/mine_wxs_180919/varSets/moderate.exQCpass.txt.gz") # A table listing all protein altering variants detected in each gene. Each gene is one row, you can split this file to generate separate target files and then use a job array to have the cluster distribute analyses of different genes to different nodes before aggregating and doing PCA
+varSet <- "/hpc/hers_en/shared/wxs/mine_wxs_180919/varSets/moderate.exQCpass.txt.gz" # Paul: table will be opened line-for-line further on
 #>>> Mine
-install.packages('jacpop')
 library(jacpop)
 #<<< End
 
@@ -15,6 +14,8 @@ library(jacpop)
 gdb=RSQLite::dbConnect(RSQLite::dbDriver("SQLite"),gdb)
 varSet=gzcon(file(varSet,open="rb"))
 
+#
+SM <- RSQLite::dbGetQuery(gdb, "select * from postPCA") # Paul: load phenotype info 
 # iterate through each gene in input varSet file
 while (TRUE)
 {
@@ -27,12 +28,21 @@ while (TRUE)
   # extract the database ids for variants in target gene
   VAR_id=unlist(strsplit(i[2],split=","))
   # Load the sample genotypes for target variants
-  GT=RVAT::loadGT(gdb, VAR_id)
+  GT=rvat::loadGT(gdb, VAR_id, SM=SM) # Paul: Changed RVAT to rvat
+  keep=(!is.na(SM[,"pheno"])) & (SM[,"pheno"] %in% c(0,1))  
+  GT$smFilter(keep==TRUE & GT$genoSM>0) # Paul keep samples that are present in the 'SM' table (that pass QC)
   # Kick out everything except the rare variants
   GT$flipToMinor()
   GT$varFilter(GT$af<=0.001 & GT$af>0 & GT$genoVar>0)
   # Calculate Jaccard similarity within this gene
-# J=FranciscosFavoredJaccardDistanceFunction(GT$GT) #GT$GT is the matrix you are looking for, individual variant equivalent to what you have used until now
-  res<-generate_pw_jaccard(geno=GT$GT, pop.label=???) #GT$GT is the matrix you are looking for, individual variant equivalent to what you have used until now
+  # J=FranciscosFavoredJaccardDistanceFunction(GT$GT) #GT$GT is the matrix you are looking for, individual variant equivalent to what you have used until now
+  res<-generate_pw_jaccard(geno=GT$GT, pop.label=GT$SM$Site) #GT$GT is the matrix you are looking for, individual variant equivalent to what you have used until now
 }
 
+#>>> Mine
+# Save results in file.
+Jac = res[["Jac"]]
+pcs = res[["pcs"]]
+write.csv(Jac, "/hpc/hers_en/fsimoes/logs/objects/jacpop_trial_Jac.csv")
+write.csv(pcs, "/hpc/hers_en/fsimoes/logs/objects/jacpop_trial_pcs.csv")
+#<<< End
