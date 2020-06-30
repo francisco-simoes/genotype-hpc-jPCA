@@ -30,6 +30,7 @@ def build_gram(X, kernel_func, func_params : 'dict'):
 gram = build_gram(X, kernel_rbf, {'gamma': 10.})
 print(gram.shape)
 
+#Since we chose "precomputed" above, then we must supply fit_transform with the gram matrix already computed:
 X_kpca = kpca.fit_transform(gram) #Not sure why fit_transform instead of fit!! ???
 #X_back = kpca.inverse_transform(X_kpca)
 pca = PCA()

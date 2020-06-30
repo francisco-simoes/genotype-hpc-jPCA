@@ -69,7 +69,7 @@ plt.scatter(X_kpca[reds, 0], X_kpca[reds, 1], c="red",
             s=20, edgecolor='k')
 plt.scatter(X_kpca[blues, 0], X_kpca[blues, 1], c="blue",
             s=20, edgecolor='k')
-plt.title("Projection by KPCA")
+plt.title("Projection by Jaccard KPCA")
 plt.xlabel(r"1st principal component in space induced by $\phi$")
 plt.ylabel("2nd component")
 
