@@ -22,4 +22,5 @@ n_components = 10
 #n_components = 100
 
 # For kPCA pheno logistic regression
-n_pcs_to_use = 5
+#n_pcs_to_use = 5
+n_pcs_to_use = 10
