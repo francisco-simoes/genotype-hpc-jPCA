@@ -1,6 +1,8 @@
 args <- commandArgs(trailingOnly = TRUE)
-minvar = args[1]
-chunksize = args[2]
+minvar = as.integer(args[1])
+chunksize = as.integer(args[2])
+print(minvar)
+print(chunksize)
 maxvar = minvar + chunksize
 
 gdb="/hpc/hers_en/shared/wxs/mine_wxs_180919/gdb/mine_wxs_180919.gdb"   
