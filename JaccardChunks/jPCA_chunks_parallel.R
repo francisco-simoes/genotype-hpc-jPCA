@@ -1,6 +1,6 @@
 args <- commandArgs(trailingOnly = TRUE)
 minvar = args[1]
-chunksize = 10000
+chunksize = args[2]
 maxvar = minvar + chunksize
 
 gdb="/hpc/hers_en/shared/wxs/mine_wxs_180919/gdb/mine_wxs_180919.gdb"   
@@ -39,11 +39,11 @@ for (i in 1:nrow(SM)) #Cycle over individuals)
 	}
 }
 
-write.table(m01,file=sprintf("m01_%s:%s.txt"),quote=F,sep="\t")
-write.table(m02,file=sprintf("m02_%s:%s.txt"),quote=F,sep="\t")
-write.table(m10,file=sprintf("m10_%s:%s.txt"),quote=F,sep="\t")
-write.table(m11,file=sprintf("m11_%s:%s.txt"),quote=F,sep="\t")
-write.table(m12,file=sprintf("m12_%s:%s.txt"),quote=F,sep="\t")
-write.table(m20,file=sprintf("m20_%s:%s.txt"),quote=F,sep="\t")
-write.table(m21,file=sprintf("m21_%s:%s.txt"),quote=F,sep="\t")
-write.table(m22,file=sprintf("m22_%s:%s.txt"),quote=F,sep="\t")
+save(m01,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/m01_%s:%s.rda", minvar, maxvar))
+save(m02,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/m02_%s:%s.rda", minvar, maxvar))
+save(m10,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/m10_%s:%s.rda", minvar, maxvar))
+save(m11,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/m11_%s:%s.rda", minvar, maxvar))
+save(m12,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/m12_%s:%s.rda", minvar, maxvar))
+save(m20,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/m20_%s:%s.rda", minvar, maxvar))
+save(m21,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/m21_%s:%s.rda", minvar, maxvar))
+save(m22,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/m22_%s:%s.rda", minvar, maxvar))
