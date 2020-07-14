@@ -39,6 +39,6 @@ for (i in 1:length(var))
     }
   }
 
-gram=(m11 + m22 / (m01 + m02 + m10 + m12 + m20 + m21))
+gram=(m11 + m22 / (m01 + m02 + m10 + + m11 + m12 + m20 + m21 + m22))
 write.table(gram,file="jaccard_gram_R.txt",quote=F,sep="\t")
 }
