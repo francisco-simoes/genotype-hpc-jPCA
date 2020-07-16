@@ -7,25 +7,54 @@ maxvar = minvar + chunksize
 
 gdb="/hpc/hers_en/shared/wxs/mine_wxs_180919/gdb/mine_wxs_180919.gdb"   
 gdb=RSQLite::dbConnect(RSQLite::dbDriver("SQLite"),gdb)
+print('before SM')
 SM <- RSQLite::dbGetQuery(gdb, "select * from postPCA")
+print('after SM')
+print('before var scan')
 var=scan("VAR_id.txt") #Create txt with `echo "select VAR_id from exQCpass" | sqlite3 $gdb`
+print('after var scan')
 #if (length(var)>memlimit){var=split(var, cut(seq_along(var), ceiling(length(var)/memlimit), labels = FALSE))}else{var=list(var)} #Divide `var` in chunks.
 var=var[minvar:maxvar]
+print('before m01')
 m01=matrix(0,nrow=nrow(SM),ncol=nrow(SM)) 
+print('after m01')
+print('before m02')
 m02=matrix(0,nrow=nrow(SM),ncol=nrow(SM)) 
+print('after m02')
+print('before m10')
 m10=matrix(0,nrow=nrow(SM),ncol=nrow(SM)) 
+print('after m10')
+print('before m11')
 m11=matrix(0,nrow=nrow(SM),ncol=nrow(SM)) 
+print('after m11')
+print('before m12')
 m12=matrix(0,nrow=nrow(SM),ncol=nrow(SM)) 
+print('after m12')
+print('before m20')
 m20=matrix(0,nrow=nrow(SM),ncol=nrow(SM)) 
+print('after m20')
+print('before m21')
 m21=matrix(0,nrow=nrow(SM),ncol=nrow(SM)) 
+print('after m21')
+print('before m22')
 m22=matrix(0,nrow=nrow(SM),ncol=nrow(SM)) 
+print('after m22')
 # Load the sample genotypes for target variants
-GT=rvat::loadGT(gdb, var[[i]], SM=SM)  # Kick out everything except the rare variants
+print('var length:')
+print(length(var))
+print('before GT rvat')
+GT=rvat::loadGT(gdb, var, SM=SM)  # Kick out everything except the rare variants
+print('after GT rvat')
 GT$flipToMinor()
 # kick out everything except rare high call rate variants
+print('before filter')
 GT$varFilter(GT$af<=0.001 & GT$af>0 & GT$genoVar>0.7)
+print('after filter')
 # Get rid of NAs:
+print('before NA removal')
 GT$missingToRef() #NAs turn to zeros.  for (i in 1:now(SM))
+print('after NA removal')
+print('begin loop')
 for (i in 1:nrow(SM)) #Cycle over individuals)
 {
 	for(j in 1:nrow(SM))
@@ -40,6 +69,7 @@ for (i in 1:nrow(SM)) #Cycle over individuals)
 	m22[i,j]=sum(GT$GT[i,] == 2 & GT$GT[j,] == 2)
 	}
 }
+print('end loop')
 
 save(m01,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/m01_%s:%s.rda", minvar, maxvar))
 save(m02,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/m02_%s:%s.rda", minvar, maxvar))
