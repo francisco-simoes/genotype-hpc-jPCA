@@ -52,7 +52,8 @@ GT$varFilter(GT$af<=0.001 & GT$af>0 & GT$genoVar>0.7)
 print('after filter')
 # Get rid of NAs:
 print('before NA removal')
-GT$missingToRef() #NAs turn to zeros.  for (i in 1:now(SM))
+#GT$missingToRef() #NAs turn to zeros.  for (i in 1:now(SM))
+GT$GT[is.na(GT$GT)]=0
 print('after NA removal')
 print('begin loop')
 for (i in 1:nrow(SM)) #Cycle over individuals)
