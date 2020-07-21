@@ -2,8 +2,7 @@ args <- commandArgs(trailingOnly = TRUE)
 chunknumber = args[1]
 chunksize = args[2]
 
-minvars <- #[] ???
-
+minvars <- lapply(0:chunknumber-1, function(x) x*chunksize+1)
 
 gdb="/hpc/hers_en/shared/wxs/mine_wxs_180919/gdb/mine_wxs_180919.gdb"   
 gdb=RSQLite::dbConnect(RSQLite::dbDriver("SQLite"),gdb)
