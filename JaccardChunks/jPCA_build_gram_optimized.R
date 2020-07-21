@@ -2,9 +2,17 @@ args <- commandArgs(trailingOnly = TRUE)
 chunknumber = as.integer(args[1])
 chunksize = as.integer(args[2])
 
-minvars <- lapply(0:chunknumber-1, function(x) x*chunksize+1)
+print('chunknumber:')
+print(chunknumber)
+print('chunksize:')
+print(chunksize)
+
+minvars <- lapply(0:(chunknumber+1), function(x) x*chunksize+1)
+#(chunknumber+1) in the first arg to account for the leftover chunk.
 print('minvars length:')
 print(length(minvars))
+print('minvars:')
+print(minvars)
 
 gdb="/hpc/hers_en/shared/wxs/mine_wxs_180919/gdb/mine_wxs_180919.gdb"   
 gdb=RSQLite::dbConnect(RSQLite::dbDriver("SQLite"),gdb)
@@ -17,10 +25,15 @@ for (minvar in minvars)
 {
 	print('Current minvar:')
 	print(minvar)
-	different_positive_count = load(sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/diff_pos_count_%s.rda", minvar))
-	equal_positive_count = load(sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/eq_pos_count_%s.rda", minvar))
 
+	equal_positive_count = load(sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/eq_pos_count_%s.rda", minvar))
+	print(Equal_positive_count)
+	print(typeof(Equal_positive_count))
+	print(equal_positive_count)
+	print(typeof(equal_positive_count))
 	Equal_positive_count = Equal_positive_count + equal_positive_count
+
+	different_positive_count = load(sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/diff_pos_count_%s.rda", minvar))
 	Different_positive_count = Different_positive_count + different_positive_count
 #	M01=M01+m01
 #	M02=M02+m02
