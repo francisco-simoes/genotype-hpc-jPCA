@@ -1,5 +1,5 @@
-chunknumber=3
-chunksize=1000
+chunknumber=2
+chunksize=10000
 minvars=$(for x in $(eval echo {1..$chunknumber}); do echo $(($x * $chunksize + 1)); done)
 for minvar in $minvars
 do
