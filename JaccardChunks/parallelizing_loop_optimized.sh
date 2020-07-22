@@ -1,9 +1,9 @@
-#chunknumber=134 
-chunknumber=2
-#chunksize=10000
-chunksize=10
-#totalvars=1343816
-totalvars=23
+chunknumber=134 
+chunksize=10000
+totalvars=1343816
+#chunknumber=2
+#chunksize=10
+#totalvars=23
 leftover=$(($totalvars - $chunknumber * $chunksize))
 echo 'chunknumber:' $chunknumber
 echo 'chunksize:' $chunksize

@@ -8,4 +8,4 @@ totalvars=23
 echo 'chunknumber:' $chunknumber
 echo 'chunksize:' $chunksize
 
-sbatch --job-name=gram /hpc/hers_en/fsimoes/execute.sh /hpc/hers_en/shared/wxs/miniconda3/bin/Rscript /hpc/hers_en/fsimoes/jPCA/JaccardChunks/jPCA_build_gram_optimized.R $chunknumber $chunksize
+sbatch --job-name=gram /hpc/hers_en/fsimoes/execute_80G.sh /hpc/hers_en/shared/wxs/miniconda3/bin/Rscript /hpc/hers_en/fsimoes/jPCA/JaccardChunks/jPCA_build_gram_optimized.R $chunknumber $chunksize

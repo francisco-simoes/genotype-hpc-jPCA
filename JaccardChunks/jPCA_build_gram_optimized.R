@@ -7,7 +7,7 @@ print(chunknumber)
 print('chunksize:')
 print(chunksize)
 
-minvars <- lapply(0:(chunknumber+1), function(x) x*chunksize+1)
+minvars <- lapply(0:chunknumber, function(x) x*chunksize+1)
 #(chunknumber+1) in the first arg to account for the leftover chunk.
 print('minvars length:')
 print(length(minvars))
@@ -59,4 +59,12 @@ print('loop end')
 
 #gram=(M11 + M22) / (M01 + M02 + M10 + M11 + M12 + M20 + M21 + M22)
 gram <- Equal_positive_count / (Equal_positive_count + Different_positive_count)
-write.table(gram,file="jaccard_gram_R.txt",quote=F,sep="\t")
+#gram has NAs wherever the total positive count is zero -> set those to zero:
+print("number of nas:")
+print(sum(is.na(gram)))
+print("number of non-nas:")
+print(sum(!is.na(gram)))
+gram[is.na(gram)]=0
+print('nas have been cleaned. Writing file...')
+write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R.txt",quote=F,sep="\t")
+print('END')
