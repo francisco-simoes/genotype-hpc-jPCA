@@ -51,5 +51,5 @@ time2 <- Sys.time()
 print('Computation delta t:')
 print(time2-time1)
 
-save(different_positive_count,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/diff_pos_count_%s.rda", minvar))
-save(equal_positive_count,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/eq_pos_count_%s.rda", minvar))
+saveRDS(different_positive_count,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/diff_pos_count_%s.rds", minvar))
+saveRDS(equal_positive_count,file=sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/eq_pos_count_%s.rds", minvar))
