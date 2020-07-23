@@ -43,9 +43,11 @@ for (minvar in minvars)
 	print(dim(Equal_positive_count))
 	print(dim(equal_positive_count))
 	Equal_positive_count = Equal_positive_count + equal_positive_count
+	rm(equal_positive_count); gc() #Clean up to save up RAM
 
 	different_positive_count = readRDS(sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/diff_pos_count_%s.rds", minvar))
 	Different_positive_count = Different_positive_count + different_positive_count
+	rm(different_positive_count); gc() #Clean up to save up RAM
 #	M01=M01+m01
 #	M02=M02+m02
 #	M10=M10+m10

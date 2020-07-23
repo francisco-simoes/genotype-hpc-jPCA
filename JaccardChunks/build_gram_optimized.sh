@@ -1,10 +1,11 @@
 echo 'Building gram matrix!'
-#chunknumber=134  #Excludes leftover chunk!
-chunknumber=2
-#chunksize=10000
-chunksize=10
-#totalvars=1343816
-totalvars=23
+chunknumber=134  #Excludes leftover chunk!
+chunksize=10000
+#totalvars=1343816 #useless
+
+#chunknumber=2
+#chunksize=10
+#totalvars=23
 echo 'chunknumber:' $chunknumber
 echo 'chunksize:' $chunksize
 
