@@ -10,11 +10,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load necessary settings
-N = jPCA_settings.N
+#N = jPCA_settings.N
 
 # Get OG pcs
 df = pd.read_csv('/hpc/hers_en/fsimoes/wxs/Relevant/mine_wxs_180919.postPCA.pheno', sep='\t')
-df = df.iloc[:N]
+#df = df.iloc[:N]
 #print(df)
 print(df.columns)
 
@@ -23,7 +23,7 @@ OG_scores_matrix = OG_pcs_df.to_numpy()
 print('OG scores matrix shape:', OG_scores_matrix.shape)
 
 # Load the kpca PC scores
-kpca_scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/kPCA_X_kpca_N={}.npy'.format(N))
+kpca_scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy')
 kpca_scores_matrix = kpca_scores_matrix[:, :10] 
 print('kpca pc scores matrix shape:', kpca_scores_matrix.shape)
 #(One PC for each column).
@@ -51,8 +51,8 @@ for i in range(dim1):
     for j in range(dim2):
         text = ax.text(j, i, round(corr_matrix[i, j], 2), ha="center", va="center", color="w")
 
-ax.set_title("Correlation between kPCA PCs and standard PCs")
+ax.set_title("Correlation between kPCA PCs and standard PCs - SNP burdens case.")
 fig.tight_layout()
-plt.savefig('/hpc/hers_en/fsimoes/logs/images/kpca_vs_OG_correlation_N={}'.format(N))
+plt.savefig('/hpc/hers_en/fsimoes/logs/images/kpca_vs_OG_correlation_SNP')
 #plt.show()
 
