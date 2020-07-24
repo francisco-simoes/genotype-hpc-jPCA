@@ -21,7 +21,7 @@ n_pcs_to_use = jPCA_settings.n_pcs_to_use
 
 # Get labels' dataframe
 df = pd.read_csv('/hpc/hers_en/fsimoes/wxs/Relevant/mine_wxs_180919.postPCA.pheno', sep='\t')
-df = df.iloc[:N]
+#df = df.iloc[:N]
 #print(df)
 print(df.columns)
 phenos = df['pheno'].unique()
@@ -29,7 +29,7 @@ number_of_phenos = len(phenos)
 print('Phenos:', df['pheno'].unique())
 
 # Load the PC scores and create scores Dataframe.
-X_kpca = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy) #This is the scores matrix!
+X_kpca = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy') #This is the scores matrix!
 X_kpca = X_kpca[:, :n_pcs_to_use]
 print('Scores matrix shape: ', X_kpca.shape)
 #(One PC for each column).

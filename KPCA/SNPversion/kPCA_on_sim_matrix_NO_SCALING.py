@@ -57,7 +57,7 @@ PC2_max = max(scores.PC2_score)
 
 #ax1.set_xlim(PC1_min, PC1_max); ax1.set_ylim(PC2_min, PC2_max)
 ax1.set_xlabel('PC1'); ax1.set_ylabel('PC2')
-plt.title('kPCA: First two PCs for N={}'.format(N))
+plt.title('kPCA: First two PCs for SNP burdens.')
 #Create scatter plot:
 plt.scatter(scores.PC1_score, scores.PC2_score)
 plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_PCs_SNPversion.png')

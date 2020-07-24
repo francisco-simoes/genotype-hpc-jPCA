@@ -8,11 +8,11 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 # Load necessary settings
-N = jPCA_settings.N
+#N = jPCA_settings.N
 
 # Get labels' dataframe
 df_old = pd.read_csv('/hpc/hers_en/fsimoes/wxs/Relevant/mine_wxs_180919.postPCA.pheno', sep='\t')
-df_old = df_old.iloc[:N]
+#df_old = df_old.iloc[:N]
 #print(df)
 #print(df.columns)
 print('non-NAs in cohort:', df_old['cohort'].count())
@@ -50,8 +50,8 @@ print(df_old['cohort'].notna())
 loc = np.arange(0,max(labels),max(labels)/float(len(colors)))
 cb.set_ticks(loc)
 cb.set_ticklabels(cohorts)
-plt.title('First two PCs for N={}'.format(N))
+plt.title('First two PCs for SNP burdens with cohort labels.')
 plt.xlabel('PC1')
 plt.ylabel('PC2')
-plt.savefig(('/hpc/hers_en/fsimoes/logs/images/kPCA_cohort_NO_nas_colorized_SNP')
+plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_cohort_NO_nas_colorized_SNP')
 #plt.show()
