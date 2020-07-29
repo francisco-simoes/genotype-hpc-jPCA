@@ -16,13 +16,10 @@ from sklearn.model_selection import train_test_split
 
 print('Glm with phenotype\n')
 # Load necessary settings
-#N = jPCA_settings.N
 n_pcs_to_use = jPCA_settings.n_pcs_to_use
 
 # Get labels' dataframe
 df = pd.read_csv('/hpc/hers_en/fsimoes/wxs/Relevant/mine_wxs_180919.postPCA.pheno', sep='\t')
-#df = df.iloc[:N]
-#print(df)
 print(df.columns)
 phenos = df['pheno'].unique()
 number_of_phenos = len(phenos)

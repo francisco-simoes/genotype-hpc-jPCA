@@ -37,3 +37,6 @@ All pipelines follow the same format:
 # Pheno counts and ratios
 - The two peaks of the histogram could come from unbalanced representation of different phenos (0 or 1) on each peak.
 - I tested this, and it is not true: look at the pheno ratio log to verify this: for every pheno, its ratio on each section of the histogram is approximately the same.
+
+# SNP pipeline:
+chunks parallel loop >> build gram >> convert to npy >> [gram_heatmap; kpca on sim matrix] >> [glm pheno; pheno labelled; cohort labelled; pc correlation]

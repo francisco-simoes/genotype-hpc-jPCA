@@ -35,8 +35,8 @@ print('\n\nData description:\n{}'.format(df.iloc[:,:5].describe()))
 
 # Fit jPCA
 kpca = KernelPCA(kernel='precomputed')
-X_kpca = kpca.fit_transform(df) #This is the scores matrix!
-print(X_kpca.shape)
+X_kpca = kpca.fit_transform(df) #This is the scores matrix! fit_transform already centers the Gram matrix.
+print('X_kpca shape: ', X_kpca.shape)
 
 pc_scores_list = ['PC{}_score'.format(i+1) for i in range(X_kpca.shape[1])]
 

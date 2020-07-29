@@ -38,10 +38,6 @@ for (minvar in minvars)
 	print(minvar)
 
 	equal_positive_count = readRDS(sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/eq_pos_count_%s.rds", minvar))
-	print(typeof(Equal_positive_count))
-	print(typeof(equal_positive_count))
-	print(dim(Equal_positive_count))
-	print(dim(equal_positive_count))
 	Equal_positive_count = Equal_positive_count + equal_positive_count
 	rm(equal_positive_count); gc() #Clean up to save up RAM
 
@@ -68,5 +64,6 @@ print("number of non-nas:")
 print(sum(!is.na(gram)))
 gram[is.na(gram)]=0
 print('nas have been cleaned. Writing file...')
-write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R.txt",quote=F,sep="\t")
+write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_common.txt",quote=F,sep="\t")
+#write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R.txt",quote=F,sep="\t")
 print('END')

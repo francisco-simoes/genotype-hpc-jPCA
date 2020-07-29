@@ -10,8 +10,8 @@ gdb=RSQLite::dbConnect(RSQLite::dbDriver("SQLite"),gdb)
 print('before SM')
 SM <- RSQLite::dbGetQuery(gdb, "select * from postPCA")
 print('before var scan')
-var=scan("VAR_id.txt") #Create txt with `echo "select VAR_id from exQCpass" | sqlite3 $gd    b`
-#if (length(var)>memlimit){var=split(var, cut(seq_along(var), ceiling(length(var)/memlimi    t), labels = FALSE))}else{var=list(var)} #Divide `var` in chunks.
+var=scan("VAR_id.txt") #Create txt with `echo "select VAR_id from exQCpass" | sqlite3 $gdb`
+#if (length(var)>memlimit){var=split(var, cut(seq_along(var), ceiling(length(var)/memlimit), labels = FALSE))}else{var=list(var)} #Divide `var` in chunks.
 var=var[minvar:maxvar] # Load the sample genotypes for target variants
 print('var length:')
 print(length(var))
@@ -22,7 +22,8 @@ GT$flipToMinor()
 # kick out everything except rare high call rate variants
 print('before filter')
 GT$smFilter(!is.na(GT$SM$IID) & GT$SM$pheno %in% c(0,1))
-GT$varFilter(GT$af<=0.001 & GT$af>0 & GT$genoVar>0.7)
+#GT$varFilter(GT$af<=0.001 & GT$af>0 & GT$genoVar>0.7) #Rare variants.
+GT$varFilter(GT$af>0.01 & GT$af>0 & GT$genoVar>0.7) #Common variants.
 SM <- GT$SM
 # Get rid of NAs:
 print('before NA removal')
