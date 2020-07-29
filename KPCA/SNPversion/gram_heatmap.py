@@ -1,8 +1,10 @@
 '''
 Creates heatmap of the gram matrix.
+(May run interactively if no X display is available).
 '''
 import numpy as np
 import matplotlib as mpl
+mpl.use('Agg') #Won't need X display.
 import matplotlib.pyplot as plt
 
 #plt.ion() # script will continue running after show().
