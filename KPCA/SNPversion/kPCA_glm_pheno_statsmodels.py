@@ -14,7 +14,7 @@ import statsmodels.api as sm
 from sklearn.metrics import recall_score, precision_score, accuracy_score, f1_score
 from sklearn.model_selection import train_test_split
 
-print('Glm with phenotype\n')
+print('Glm with phenotype; SNP version; common vars\n')
 # Load necessary settings
 n_pcs_to_use = jPCA_settings.n_pcs_to_use
 
@@ -26,7 +26,8 @@ number_of_phenos = len(phenos)
 print('Phenos:', df['pheno'].unique())
 
 # Load the PC scores and create scores Dataframe.
-X_kpca = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy') #This is the scores matrix!
+#X_kpca = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy') #This is the scores matrix!
+X_kpca = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_common.npy') #This is the scores matrix!
 X_kpca = X_kpca[:, :n_pcs_to_use]
 print('Scores matrix shape: ', X_kpca.shape)
 #(One PC for each column).

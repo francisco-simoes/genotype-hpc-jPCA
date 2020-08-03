@@ -10,12 +10,14 @@ import matplotlib.pyplot as plt
 #plt.ion() # script will continue running after show().
 plt.style.use('seaborn-white')
 
-GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R.npy')
+#GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R.npy')
+GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_common.npy')
 print('Similarity matrix shape:', GRAM.shape)
 
 # Heatmap with gram matrix:
 plt.figure()
 plt.imshow(GRAM, cmap='hot')
 plt.colorbar()
-plt.title('Similarity matrix colormap; SNP version')
-plt.savefig('/hpc/hers_en/fsimoes/logs/images/Gram_heatmap_SNP-version.png')
+plt.title('Similarity matrix colormap; SNP (common vars) version')
+#plt.savefig('/hpc/hers_en/fsimoes/logs/images/Gram_heatmap_common_SNP-version.png')
+plt.savefig('/hpc/hers_en/fsimoes/logs/images/Gram_heatmap_SNP-version_common.png')

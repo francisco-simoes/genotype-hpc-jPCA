@@ -4,6 +4,8 @@ sys.path.append('/hpc/hers_en/fsimoes/jPCA')
 import jPCA_settings
 import pandas as pd
 import numpy as np
+import matplotlib as mpl
+mpl.use('Agg') #Won't need X display.
 import matplotlib
 import matplotlib.pyplot as plt
 
@@ -31,7 +33,8 @@ number_of_cohorts=len(cohorts)
 print('cohort types:', df['cohort'].unique(), '\nNumber of types:', number_of_cohorts)
 
 # Load the PC scores and create scores Dataframe.
-scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy')
+#scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy')
+scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_common.npy')
 #(One PC for each column).
 
 # Plot with colored classes
@@ -53,5 +56,5 @@ cb.set_ticklabels(cohorts)
 plt.title('First two PCs for SNP burdens with cohort labels.')
 plt.xlabel('PC1')
 plt.ylabel('PC2')
-plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_cohort_NO_nas_colorized_SNP')
+plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_cohort_NO_nas_colorized_SNP_common.png')
 #plt.show()

@@ -8,8 +8,9 @@ sys.path.append('/hpc/hers_en/fsimoes/jPCA')
 
 import jPCA_settings
 import numpy as np
-import pandas as pd
 import matplotlib as mpl
+mpl.use('Agg') #Won't need X display.
+import pandas as pd
 import matplotlib.pyplot as plt
 
 from sklearn.preprocessing import scale
@@ -20,7 +21,8 @@ from sklearn.datasets import make_circles
 #plt.ion() # script will continue running after show().
 plt.style.use('seaborn-white')
 
-GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R.npy')
+#GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R.npy')
+GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_common.npy')
 print('Similarity matrix shape:', GRAM.shape)
 
 # Create dataframe
@@ -41,7 +43,8 @@ print('X_kpca shape: ', X_kpca.shape)
 pc_scores_list = ['PC{}_score'.format(i+1) for i in range(X_kpca.shape[1])]
 
 #Save it in .npy file.
-np.save('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy', X_kpca)
+#np.save('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy', X_kpca)
+np.save('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_common.npy', X_kpca)
 
 scores = pd.DataFrame(X_kpca, index=df.index, columns=pc_scores_list)
 print('\n\nScores (head):\n{}'.format(scores.head()))
@@ -57,8 +60,9 @@ PC2_max = max(scores.PC2_score)
 
 #ax1.set_xlim(PC1_min, PC1_max); ax1.set_ylim(PC2_min, PC2_max)
 ax1.set_xlabel('PC1'); ax1.set_ylabel('PC2')
-plt.title('kPCA: First two PCs for SNP burdens.')
+plt.title('kPCA: First two PCs for SNP burdens; common vars case.')
 #Create scatter plot:
 plt.scatter(scores.PC1_score, scores.PC2_score)
-plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_PCs_SNPversion.png')
+#plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_PCs_SNPversion.png')
+plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_PCs_SNPversion_common.png')
 #plt.show()

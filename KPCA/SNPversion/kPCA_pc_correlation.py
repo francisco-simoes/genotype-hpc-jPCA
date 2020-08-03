@@ -7,6 +7,8 @@ sys.path.append('/hpc/hers_en/fsimoes/jPCA')
 import jPCA_settings
 import pandas as pd
 import numpy as np
+import matplotlib as mpl
+mpl.use('Agg') #Won't need X display.
 import matplotlib.pyplot as plt
 
 # Load necessary settings
@@ -23,7 +25,8 @@ OG_scores_matrix = OG_pcs_df.to_numpy()
 print('OG scores matrix shape:', OG_scores_matrix.shape)
 
 # Load the kpca PC scores
-kpca_scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy')
+#kpca_scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy')
+kpca_scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_common.npy')
 kpca_scores_matrix = kpca_scores_matrix[:, :10] 
 print('kpca pc scores matrix shape:', kpca_scores_matrix.shape)
 #(One PC for each column).
@@ -53,6 +56,6 @@ for i in range(dim1):
 
 ax.set_title("Correlation between kPCA PCs and standard PCs - SNP burdens case.")
 fig.tight_layout()
-plt.savefig('/hpc/hers_en/fsimoes/logs/images/kpca_vs_OG_correlation_SNP')
+plt.savefig('/hpc/hers_en/fsimoes/logs/images/kpca_vs_OG_correlation_SNP_common.png')
 #plt.show()
 
