@@ -1,4 +1,4 @@
-echo 'START of $0'
+echo 'START of' $0
 totalvars=$1
 chunksize=$2
 chunknumber=$3
@@ -27,4 +27,4 @@ echo 'Last minvar:' $minvar
 sbatch --job-name=jaccard_chunks /hpc/hers_en/fsimoes/execute.sh /hpc/hers_en/shared/wxs/miniconda3/bin/Rscript /hpc/hers_en/fsimoes/jPCA/JaccardChunks/jPCA_chunks_parallel_optimized.R $minvar $leftover
 
 echo 'Counting completed.'
-echo 'END of $0.'
+echo 'END of' $0

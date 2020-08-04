@@ -1,3 +1,4 @@
+echo 'START of' $0
 # A function that rounds up after division of num/denom:
 function round_up_division {
 	let local num=$1
@@ -27,10 +28,11 @@ echo 'leftover:' $leftover
 echo 'Parallelizing $chunknumber scripts to get counts in mijs/ directory...'
 bash /hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/parallelizing_loop_optimized.sh $totalvars $chunksize $chunknumber $leftover
 
-# Build Gram matrix
-echo 'Building Gram matrix!'
-bash /hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/build_gram_optimized.sh $totalvars $chunksize $chunknumber $leftover
+sleep 14000 #Let the above script finish (estimation).
 
 # Build Gram matrix
 echo 'Building Gram matrix!'
 bash /hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/build_gram_optimized.sh $totalvars $chunksize $chunknumber $leftover
+
+echo 'Gram matrix built!'
+echo 'END of' $0
