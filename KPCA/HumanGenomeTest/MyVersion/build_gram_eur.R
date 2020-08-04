@@ -1,5 +1,8 @@
 # Note the VAR_id must be loaded from this file (these have been "LD pruned" as per Dmitry et al)
-var=scan("/hpc/hers_en/kkenna/rvat_tutorial/variants.txt")
+#var=scan("/hpc/hers_en/kkenna/rvat_tutorial/variants.txt")
+var=scan("/hpc/hers_en/fsimoes/jPCA/KPCA/HumanGenomeTest/variants_shuffled.txt")
+nvars=1000000
+var=var[1:nvars] #Estimation: will need 680K for GT.
 #var=var[minvar:maxvar]
 gdb="/hpc/hers_en/kkenna/rvat_tutorial/phase3_shapeit2_mvncall_integrated_v5a.20130502.gdb"
 gdb=RSQLite::dbConnect(RSQLite::dbDriver("SQLite"),gdb)
@@ -45,6 +48,6 @@ print("number of non-nas:")
 print(sum(!is.na(gram)))
 gram[is.na(gram)]=0
 print('nas have been cleaned. Writing file...')
-write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_eur_rare.txt",quote=F,sep="\t")
+write.table(gram,file=sprintf("/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_eur_rare_with_%s_vars.txt",nvars),quote=F,sep="\t")
 #write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_eur_common",quote=F,sep="\t")
 print('END')

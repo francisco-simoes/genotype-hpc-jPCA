@@ -8,13 +8,14 @@ import numpy as np
 import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+nvars=1000000
 
 from sklearn.decomposition import PCA, KernelPCA
 
 #plt.ion() # script will continue running after show().
 plt.style.use('seaborn-white')
 
-GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_eur_rare.npy')
+GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_eur_rare_with_{}_vars.txt'.format(nvars))
 print('Similarity matrix shape:', GRAM.shape)
 
 # Create dataframe
@@ -35,7 +36,7 @@ print('X_kpca shape: ', X_kpca.shape)
 pc_scores_list = ['PC{}_score'.format(i+1) for i in range(X_kpca.shape[1])]
 
 #Save it in .npy file.
-np.save('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_eur_rare_mine.npy', X_kpca)
+np.save('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_eur_rare_mine_with_{}_vars.txt'.format(nvars), X_kpca)
 
 scores = pd.DataFrame(X_kpca, index=df.index, columns=pc_scores_list)
 print('\n\nScores (head):\n{}'.format(scores.head()))
@@ -54,5 +55,5 @@ ax1.set_xlabel('PC1'); ax1.set_ylabel('PC2')
 plt.title('kPCA: First two PCs for SNP burdens.')
 #Create scatter plot:
 plt.scatter(scores.PC1_score, scores.PC2_score)
-plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_PCs_eur_rare_mine.png')
+plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_PCs_eur_rare_mine_with_{}_vars.png'.format(nvars))
 #plt.show()
