@@ -1,3 +1,5 @@
+print(f'START of {__file__}')
+
 '''
 Check if kPCA pcs correlate with usual PCs.
 '''
@@ -26,7 +28,8 @@ print('OG scores matrix shape:', OG_scores_matrix.shape)
 
 # Load the kpca PC scores
 #kpca_scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy')
-kpca_scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_common.npy')
+#kpca_scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_common.npy')
+kpca_scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_common_alternative_VAR.npy')
 kpca_scores_matrix = kpca_scores_matrix[:, :10] 
 print('kpca pc scores matrix shape:', kpca_scores_matrix.shape)
 #(One PC for each column).
@@ -56,6 +59,7 @@ for i in range(dim1):
 
 ax.set_title("Correlation between kPCA PCs and standard PCs - SNP burdens case.")
 fig.tight_layout()
-plt.savefig('/hpc/hers_en/fsimoes/logs/images/kpca_vs_OG_correlation_SNP_common.png')
+plt.savefig('/hpc/hers_en/fsimoes/logs/images/kpca_vs_OG_correlation_SNP_common_alternative_VAR.png')
 #plt.show()
 
+print(f'END of {__file__}')

@@ -1,3 +1,5 @@
+print(f'START of {__file__}')
+
 import sys
 sys.path.append('/hpc/hers_en/fsimoes/jPCA')
 
@@ -23,7 +25,8 @@ print('Phenos:', df['pheno'].unique())
 
 # Load the PC scores and create scores Dataframe.
 #scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy')
-scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_common.npy')
+#scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_common.npy')
+scores_matrix = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_common_alternative_VAR.npy')
 #(One PC for each column).
 
 # Plot with colored classes
@@ -42,5 +45,8 @@ cb.set_ticklabels(phenos)
 plt.title('kpca: First two PCs for SNP burdens; pheno labels')
 plt.xlabel('PC1')
 plt.ylabel('PC2')
-plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_pheno_colorized_SNP_common.png')
+#plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_pheno_colorized_SNP_common.png')
+plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_pheno_colorized_SNP_common_alternative_VAR.png')
 #plt.show()
+
+print(f'END of {__file__}')

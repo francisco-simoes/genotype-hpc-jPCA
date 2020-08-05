@@ -3,6 +3,8 @@ Run KPCA on genotype matrix using Jaccard score as the kernel.
 Needs the Gram matrix (i.e. similarity matrix) to have been previously computed.
 Plots PC1 and PC2.
 '''
+print(f'START of {__file__}')
+
 import sys
 sys.path.append('/hpc/hers_en/fsimoes/jPCA')
 
@@ -22,7 +24,8 @@ from sklearn.datasets import make_circles
 plt.style.use('seaborn-white')
 
 #GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R.npy')
-GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_common.npy')
+#GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_common.npy')
+GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/SNPversion/jaccard_gram_R_alternative_VAR.npy')
 print('Similarity matrix shape:', GRAM.shape)
 
 # Create dataframe
@@ -44,7 +47,8 @@ pc_scores_list = ['PC{}_score'.format(i+1) for i in range(X_kpca.shape[1])]
 
 #Save it in .npy file.
 #np.save('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca.npy', X_kpca)
-np.save('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_common.npy', X_kpca)
+#np.save('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_common.npy', X_kpca)
+np.save('/hpc/hers_en/fsimoes/logs/objects/SNPversion/kPCA_X_kpca_common_alternative_VAR.npy', X_kpca)
 
 scores = pd.DataFrame(X_kpca, index=df.index, columns=pc_scores_list)
 print('\n\nScores (head):\n{}'.format(scores.head()))
@@ -64,5 +68,6 @@ plt.title('kPCA: First two PCs for SNP burdens; common vars case.')
 #Create scatter plot:
 plt.scatter(scores.PC1_score, scores.PC2_score)
 #plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_PCs_SNPversion.png')
-plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_PCs_SNPversion_common.png')
+plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_PCs_SNPversion_common_alternative_VAR.png')
 #plt.show()
+print(f'END of {__file__}')
