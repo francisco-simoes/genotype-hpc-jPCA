@@ -1,3 +1,4 @@
+memory.limit(size = 50000000)
 # Note the VAR_id must be loaded from this file (these have been "LD pruned" as per Dmitry et al)
 #var=scan("/hpc/hers_en/kkenna/rvat_tutorial/variants.txt")
 var=scan("/hpc/hers_en/fsimoes/jPCA/KPCA/HumanGenomeTest/variants_shuffled.txt")
