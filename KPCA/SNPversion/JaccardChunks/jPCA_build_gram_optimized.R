@@ -17,7 +17,7 @@ print('minvars:')
 print(minvars)
 
 #Get dimensions from a sample matrix
-eq_pos_count_sample=readRDS("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/eq_pos_count_1.rds")
+eq_pos_count_sample=readRDS("/hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/mijs/eq_pos_count_1.rds")
 dims = dim(eq_pos_count_sample)
 
 Different_positive_count=matrix(0,nrow=dims[1],ncol=dims[2]) #Replaces M01,M02,M10,M12,M20,M21
@@ -28,11 +28,11 @@ for (minvar in minvars)
 	print('Current minvar:')
 	print(minvar)
 
-	equal_positive_count = readRDS(sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/eq_pos_count_%s.rds", minvar))
+	equal_positive_count = readRDS(sprintf("/hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/mijs/eq_pos_count_%s.rds", minvar))
 	Equal_positive_count = Equal_positive_count + equal_positive_count
 	rm(equal_positive_count); gc() #Clean up to save up RAM
 
-	different_positive_count = readRDS(sprintf("/hpc/hers_en/fsimoes/jPCA/JaccardChunks/mijs/diff_pos_count_%s.rds", minvar))
+	different_positive_count = readRDS(sprintf("/hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/mijs/diff_pos_count_%s.rds", minvar))
 	Different_positive_count = Different_positive_count + different_positive_count
 	rm(different_positive_count); gc() #Clean up to save up RAM
 }
@@ -48,7 +48,7 @@ print(sum(!is.na(gram)))
 gram[is.na(gram)]=0
 print('nas have been cleaned. Writing file...')
 
-write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_alternative_VAR.txt",quote=F,sep="\t")
+write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/SNPversion/jaccard_gram_R_alternative_VAR.txt",quote=F,sep="\t")
 #write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_common.txt",quote=F,sep="\t")
 #write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R.txt",quote=F,sep="\t")
 print('END of the Gram builder (R)')

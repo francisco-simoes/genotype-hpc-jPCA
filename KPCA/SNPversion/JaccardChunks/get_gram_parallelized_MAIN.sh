@@ -19,17 +19,18 @@ else
 	leftover=0
 fi
 
-echo 'totalvars' $totalvars
+echo 'totalvars:' $totalvars
 echo 'chunksize:' $chunksize
 echo 'chunknumber:' $chunknumber
 echo 'leftover:' $leftover
 
 # Get counts with parallel scripts.
-echo 'Submitting job to Parallelize $chunknumber scripts in order to get counts in mijs/ directory...'
-sbatch --job-name=par_gram execute_10G.sh bash /hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/parallelizing_loop_optimized.sh $totalvars $chunksize $chunknumber $leftover
+echo 'Submitting job to Parallelize' $chunknumber 'scripts in order to get counts in mijs/ directory...'
+sbatch --job-name=counts_sh execute_10G.sh bash /hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/parallelizing_loop_optimized.sh $totalvars $chunksize $chunknumber $leftover
 
-# Build Gram matrix
+sleep 10 #Give it some time for the jaccard_chunks jobs to be submitted.
+# Build Gram matrix - after the mijs have been computed.
 echo 'Submitting job to build Gram matrix!'
-sbatch --dependency=singleton --job-name=par_gram execute_10.sh bash /hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/build_gram_optimized.sh $totalvars $chunksize $chunknumber $leftover
+sbatch --dependency=singleton --job-name=jaccard_chunks execute_10G.sh bash /hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/build_gram_optimized.sh $totalvars $chunksize $chunknumber $leftover
 
 echo 'END of' $0

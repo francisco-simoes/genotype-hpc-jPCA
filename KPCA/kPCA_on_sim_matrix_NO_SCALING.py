@@ -2,6 +2,8 @@
 Run KPCA on genotype matrix using Jaccard score as the kernel.
 Needs the Gram matrix (i.e. similarity matrix) to have been previously computed.
 '''
+print(f'START of {__file__}')
+
 import sys
 sys.path.append('/hpc/hers_en/fsimoes/jPCA')
 
@@ -64,3 +66,5 @@ plt.title('kPCA: First two PCs for N={}'.format(N))
 plt.scatter(scores.PC1_score, scores.PC2_score)
 plt.savefig('/hpc/hers_en/fsimoes/logs/images/kPCA_PCs_N={}.png'.format(N))
 #plt.show()
+
+print(f'END of {__file__}')
