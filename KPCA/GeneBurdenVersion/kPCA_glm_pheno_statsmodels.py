@@ -1,5 +1,5 @@
 '''
-Run statsmodels' logistic regression on kPCA scores with the phenotype as the response, and prints main metrics and Z-scores, p-values.
+Run statsmodels' glm with binomial family on on kPCA scores with the phenotype as the response, and prints main metrics and Z-scores, p-values.
 '''
 
 import sys
