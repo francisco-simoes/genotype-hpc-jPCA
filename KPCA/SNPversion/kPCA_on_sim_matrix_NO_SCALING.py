@@ -17,8 +17,7 @@ import matplotlib.pyplot as plt
 
 from sklearn.preprocessing import scale
 from jPCA_functions import *
-from sklearn.decomposition import PCA, KernelPCA
-from sklearn.datasets import make_circles
+from sklearn.decomposition import KernelPCA
 
 #plt.ion() # script will continue running after show().
 plt.style.use('seaborn-white')

@@ -57,7 +57,7 @@ for i in range(dim1):
     for j in range(dim2):
         text = ax.text(j, i, round(corr_matrix[i, j], 2), ha="center", va="center", color="w")
 
-ax.set_title("Correlation between kPCA PCs and standard PCs - SNP burdens case.")
+ax.set_title("Correlation between kPCA PCs and standard PCs - SNP alternative vars case.")
 fig.tight_layout()
 plt.savefig('/hpc/hers_en/fsimoes/logs/images/kpca_vs_OG_correlation_SNP_common_alternative_VAR.png')
 #plt.show()

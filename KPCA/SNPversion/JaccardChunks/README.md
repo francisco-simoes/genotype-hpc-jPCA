@@ -6,4 +6,4 @@ The main script `get_gram_parallelized_MAIN.sh` can be separated as follows:
 - `build_gram_optimized.sh` runs `jPCA_build_gram_optimized.R` with the appropriate arguments.
 	* `jPCA_build_gram_optimized.R` builds the gram matrix from the `mij`.
 
-The inputs of this pipeline can be changed in the main script. To change the names of the output files one must alter the `R` files themselves.
+The inputs of this pipeline can be changed in the MAIN script. To change the names of the output files one must alter the `R` files themselves.
