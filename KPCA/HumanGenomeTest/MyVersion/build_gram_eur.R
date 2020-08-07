@@ -1,8 +1,7 @@
-memory.limit(size = 50000000)
 # Note the VAR_id must be loaded from this file (these have been "LD pruned" as per Dmitry et al)
 #var=scan("/hpc/hers_en/kkenna/rvat_tutorial/variants.txt")
-var=scan("/hpc/hers_en/fsimoes/jPCA/KPCA/HumanGenomeTest/variants_shuffled.txt")
-nvars=1000000
+var=scan("/hpc/hers_en/fsimoes/variants_shuffled.txt")
+nvars=500000
 var=var[1:nvars] #Estimation: will need 680K for GT.
 #var=var[minvar:maxvar]
 gdb="/hpc/hers_en/kkenna/rvat_tutorial/phase3_shapeit2_mvncall_integrated_v5a.20130502.gdb"

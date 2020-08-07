@@ -1,9 +1,8 @@
 library(jacpop)
-memory.limit(size = 50000000)
 # Note the VAR_id must be loaded from this file (these have been "LD pruned" as per Dmitry et al)
 #var=scan("/hpc/hers_en/kkenna/rvat_tutorial/variants.txt")
 var=scan("/hpc/hers_en/fsimoes/jPCA/KPCA/HumanGenomeTest/variants_shuffled.txt")
-nvars=1000000
+nvars=500000
 var=var[1:nvars] #Estimation: will need 680K for GT.
 gdb="/hpc/hers_en/kkenna/rvat_tutorial/phase3_shapeit2_mvncall_integrated_v5a.20130502.gdb"
 gdb=RSQLite::dbConnect(RSQLite::dbDriver("SQLite"),gdb)

@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-nvars=1000000
+nvars=500000
 
 from sklearn.decomposition import PCA, KernelPCA
 
