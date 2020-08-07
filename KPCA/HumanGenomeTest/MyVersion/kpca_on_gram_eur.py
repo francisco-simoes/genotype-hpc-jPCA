@@ -15,7 +15,7 @@ from sklearn.decomposition import PCA, KernelPCA
 #plt.ion() # script will continue running after show().
 plt.style.use('seaborn-white')
 
-GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_eur_rare_with_{}_vars.txt'.format(nvars))
+GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_eur_rare_with_{}_vars.npy'.format(nvars))
 print('Similarity matrix shape:', GRAM.shape)
 
 # Create dataframe
