@@ -2,3 +2,5 @@ __pycache__/jPCA_functions.cpython-37.pyc
 __pycache__/jPCA_settings.cpython-37.pyc
 indiv_counts_LOF_maf001_exQCpass_merged.txt
 KPCA/SNPversion/JaccardChunks/mijs
+KPCA/HumanGenomeTest/variants.txt
+KPCA/HumanGenomeTest/variants_shuffled.txt
