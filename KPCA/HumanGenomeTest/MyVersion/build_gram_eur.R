@@ -48,6 +48,6 @@ print("number of non-nas:")
 print(sum(!is.na(gram)))
 gram[is.na(gram)]=0
 print('nas have been cleaned. Writing file...')
-write.table(gram,file=sprintf("/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_eur_rare_with_%s_vars.txt",nvars),quote=F,sep="\t")
+write.table(gram,file=sprintf("/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_eur_rare_with_%s_vars.txt",int(nvars)),quote=F,sep="\t")
 #write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_eur_common",quote=F,sep="\t")
 print('END')
