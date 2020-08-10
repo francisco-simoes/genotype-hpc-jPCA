@@ -1,0 +1,10 @@
+Error in file(file, "r") : cannot open the connection
+Calls: scan -> file
+In addition: Warning message:
+In file(file, "r") :
+  cannot open file '/hpc/hers_en/fsimoes/jPCA/KPCA/HumanGenomeTest/variants_shuffled.txt': No such file or directory
+Execution halted
+
+real	0m7.900s
+user	0m0.206s
+sys	0m0.089s

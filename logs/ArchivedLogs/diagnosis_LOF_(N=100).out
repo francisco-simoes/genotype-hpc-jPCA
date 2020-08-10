@@ -1,0 +1,7 @@
+------------ Diagnosis ------------------
+Ratio of zeros in rounded matrix:  0.9995430401499765
+Ratio of zeros in NOT rounded matrix:  0.9218176847367598
+Number of values coming from non-zero mean-imputation:  99504
+(The above number is correct if, as it seems to be in this case, the mean of every gene burden is close to zero, thus being rounded to zero)
+Number of zeros in rounded Jaccard matrix: 9793
+Number of total elements in the Jaccard matrix: 10000

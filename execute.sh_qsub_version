@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+#$ -l h_vmem=50G
+# #$ -l tmpspace=50G
+#$ -l h_rt=20:00:00
+#$ -S /usr/bin/bash
+#$ -cwd
+#$ -o logs
+#$ -e logs
+#$ -m as
+#  #$ -M f.simoes@......
+
+if [[ -e $2 ]] # if the file exists.
+then
+	$1 $2 # run the file with the selected interpreter $1.
+else
+	echo "$2 was not found."
+fi

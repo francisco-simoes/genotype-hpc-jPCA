@@ -1,0 +1,12 @@
+Index(['FID', 'IID', 'PID', 'MID', 'sex', 'pheno', 'PC1', 'PC2', 'PC3', 'PC4',
+       'PC5', 'PC6', 'PC7', 'PC8', 'PC9', 'PC10', 'hgdpPC1', 'hgdpPC2',
+       'hgdpPC3', 'hgdpPC4', 'Site', 'Project', 'cohort', 'SequencingCentre',
+       'Grouping'],
+      dtype='object')
+Phenos: [0 1]
+Training set size: 24656
+Test set size: 6164
+------------sklearn Logit-------------
+         Recall  Precision  Accuracy  F1-score
+train  0.000177        1.0  0.771374  0.000355
+test   0.000000        0.0  0.774984  0.000000

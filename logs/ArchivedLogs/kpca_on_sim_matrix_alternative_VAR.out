@@ -1,0 +1,42 @@
+START of jPCA/KPCA/SNPversion/kPCA_on_sim_matrix_NO_SCALING.py
+Similarity matrix shape: (30820, 30820)
+Matrix corner:
+[[1.         0.20408163 0.18337218 0.16679537]
+ [0.20408163 1.         0.21705426 0.17789553]
+ [0.18337218 0.21705426 1.         0.19295559]
+ [0.16679537 0.17789553 0.19295559 1.        ]]
+Data corner:
+   similarity_with_individual_0  ...  similarity_with_individual_3
+0                      1.000000  ...                      0.166795
+1                      0.204082  ...                      0.177896
+2                      0.183372  ...                      0.192956
+3                      0.166795  ...                      1.000000
+
+[4 rows x 4 columns]
+
+
+Data description:
+       similarity_with_individual_0  ...  similarity_with_individual_4
+count                  30820.000000  ...                  30820.000000
+mean                       0.171686  ...                      0.190806
+std                        0.022608  ...                      0.024672
+min                        0.061185  ...                      0.059292
+25%                        0.156437  ...                      0.174578
+50%                        0.171770  ...                      0.191648
+75%                        0.186720  ...                      0.207565
+max                        1.000000  ...                      1.000000
+
+[8 rows x 5 columns]
+X_kpca shape:  (30820, 30819)
+
+
+Scores (head):
+   PC1_score  PC2_score  PC3_score  ...  PC30817_score  PC30818_score  PC30819_score
+0  -0.061562   0.041260  -0.068463  ...       0.000348       0.000644      -0.001399
+1  -0.034881   0.084565  -0.059508  ...       0.000550      -0.000126      -0.001512
+2  -0.059586  -0.023134  -0.062107  ...       0.001687      -0.001323      -0.001329
+3  -0.053636  -0.008837   0.059936  ...       0.000765       0.001382      -0.001258
+4  -0.093168   0.004584   0.073725  ...      -0.001930       0.000598       0.001774
+
+[5 rows x 30819 columns]
+END of jPCA/KPCA/SNPversion/kPCA_on_sim_matrix_NO_SCALING.py

@@ -1,0 +1,19 @@
+[1] 210001
+[1] 10000
+[1] "before SM"
+[1] "before var scan"
+[1] "var length:"
+[1] 10000
+[1] "before GT rvat"
+[1] "before flipToMinor"
+NULL
+[1] "before filter"
+NULL
+[1] "before NA removal"
+[1] "before defining different_positive_count"
+[1] "before defining equal_positive_count"
+[1] "before defining GT0,1,2"
+[1] "before diff count computation"
+[1] "before equal count computation"
+[1] "Computation delta t:"
+Time difference of 9.373631 mins

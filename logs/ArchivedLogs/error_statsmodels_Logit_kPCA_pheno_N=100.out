@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "jPCA/KPCA/kPCA_logit_pheno_statsmodels.py", line 47, in <module>
+    fitted_sm = model_sm.fit(method='powell') #Doesn't have saga. bfgs gives noninvert Hessian error.
+  File "/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/statsmodels/discrete/discrete_model.py", line 1913, in fit
+    disp=disp, callback=callback, **kwargs)
+  File "/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/statsmodels/discrete/discrete_model.py", line 216, in fit
+    disp=disp, callback=callback, **kwargs)
+  File "/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/statsmodels/base/model.py", line 526, in fit
+    full_output=full_output)
+  File "/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/statsmodels/base/optimizer.py", line 218, in _fit
+    hess=hessian)
+  File "/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/statsmodels/base/optimizer.py", line 560, in _fit_powell
+    direc=start_direc)
+  File "/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/scipy/optimize/optimize.py", line 2558, in fmin_powell
+    res = _minimize_powell(func, x0, args, callback=callback, **opts)
+  File "/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/scipy/optimize/optimize.py", line 2649, in _minimize_powell
+    callback(x)
+  File "/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/statsmodels/discrete/discrete_model.py", line 197, in _check_perfect_pred
+    raise PerfectSeparationError(msg)
+statsmodels.tools.sm_exceptions.PerfectSeparationError: Perfect separation detected, results not available
+
+real	0m28.556s
+user	0m2.221s
+sys	0m0.613s

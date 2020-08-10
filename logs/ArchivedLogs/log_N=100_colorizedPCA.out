@@ -1,0 +1,23 @@
+                                FID  ...              Grouping
+0                          C08-1499  ...        IBD-WXS_Group3
+1                             1698A  ...     MIGen-WXS_Group23
+2       A-ACT-AC001542-BL-UPN-14873  ...      ADSP-WXS_Group20
+3                             0830B  ...     MIGen-WXS_Group38
+4   A-ADC-AD007655-BL-NCR-11AD37821  ...       ADSP-WXS_Group6
+..                              ...  ...                   ...
+95                         CONT1010  ...     MIGen-WXS_Group25
+96                     ASC_CA_187_P  ...    Autism-WXS_Group10
+97                LP6008464-DNA_B08  ...    MinE-UK-WXS_Group3
+98                           540327  ...   Swedish-SCZ_Group13
+99                LP6005623-DNA_D09  ...  Netherlands_groups_3
+
+[100 rows x 25 columns]
+Index(['FID', 'IID', 'PID', 'MID', 'sex', 'pheno', 'PC1', 'PC2', 'PC3', 'PC4',
+       'PC5', 'PC6', 'PC7', 'PC8', 'PC9', 'PC10', 'hgdpPC1', 'hgdpPC2',
+       'hgdpPC3', 'hgdpPC4', 'Site', 'Project', 'cohort', 'SequencingCentre',
+       'Grouping'],
+      dtype='object')
+non-NAs is cohort: 75
+cohort types: [nan 'Netherlands' 'Belgium' 'Ireland' 'UK' 'Spain_Madrid'] 
+Number of types: 6
+6

@@ -1,0 +1,39 @@
+[1] "chunknumber:"
+[1] 2
+[1] "chunksize:"
+[1] 10
+[1] "minvars length:"
+[1] 3
+[1] "minvars:"
+[[1]]
+[1] 1
+
+[[2]]
+[1] 11
+
+[[3]]
+[1] 21
+
+[1] "Current minvar:"
+[1] 1
+[1] "double"
+[1] "double"
+[1] 30820 30820
+[1] 30820 30820
+[1] "Current minvar:"
+[1] 11
+[1] "double"
+[1] "double"
+[1] 30820 30820
+[1] 30820 30820
+[1] "Current minvar:"
+[1] 21
+[1] "double"
+[1] "double"
+[1] 30820 30820
+[1] 30820 30820
+[1] "loop end"
+[1] "number of nas:"
+[1] 946177600
+[1] "number of non-nas:"
+[1] 3694800

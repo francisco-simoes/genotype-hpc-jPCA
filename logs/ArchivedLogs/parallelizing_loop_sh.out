@@ -1,0 +1,17 @@
+START of /hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/parallelizing_loop_optimized.sh
+totalvars: 46708
+chunksize: 10000
+chunknumber: 5
+leftover: 6708
+Current minvar: 1
+Submitted batch job 3269320
+Current minvar: 10001
+Submitted batch job 3269321
+Current minvar: 20001
+Submitted batch job 3269322
+Current minvar: 30001
+Submitted batch job 3269323
+Last minvar: 50001
+Submitted batch job 3269324
+Counting completed.
+END of /hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/parallelizing_loop_optimized.sh

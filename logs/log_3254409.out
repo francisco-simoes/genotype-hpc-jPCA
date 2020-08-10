@@ -1,0 +1,23 @@
+START of jPCA/KPCA/SNPversion/JaccardChunks/get_gram_parallelized_MAIN.sh
+totalvars 46708
+chunksize: 10000
+chunknumber: 5
+leftover: 6708
+Parallelizing $chunknumber scripts to get counts in mijs/ directory...
+START of /hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/parallelizing_loop_optimized.sh
+totalvars
+chunksize: 10000
+chunknumber: 5
+leftover: 6708
+Current minvar: 1
+Submitted batch job 3254450
+Current minvar: 10001
+Submitted batch job 3254451
+Current minvar: 20001
+Submitted batch job 3254452
+Current minvar: 30001
+Submitted batch job 3254453
+Last minvar: 50001
+Submitted batch job 3254454
+Counting completed.
+END of /hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/parallelizing_loop_optimized.sh

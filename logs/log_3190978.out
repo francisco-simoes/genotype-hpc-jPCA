@@ -1,0 +1,22 @@
+non-NAs in cohort: 8606
+cohort types: [nan 'Netherlands' 'Belgium' 'Ireland' 'UK' 'Spain_Madrid' 'US' 'NYGC'
+ 'Spain_Barcelona' 'Portugal' 'Sweden' 'Swiss' 'France' 'Turkey' 'Israel'
+ 'Italy'] 
+Number of types: 16
+NAs after drop: 0
+cohort types: ['Netherlands' 'Belgium' 'Ireland' 'UK' 'Spain_Madrid' 'US' 'NYGC'
+ 'Spain_Barcelona' 'Portugal' 'Sweden' 'Swiss' 'France' 'Turkey' 'Israel'
+ 'Italy'] 
+Number of types: 15
+0        False
+1        False
+2        False
+3        False
+4        False
+         ...  
+30815     True
+30816    False
+30817     True
+30818    False
+30819    False
+Name: cohort, Length: 30820, dtype: bool

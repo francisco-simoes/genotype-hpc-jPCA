@@ -1,0 +1,134 @@
+
+ --- Section 0 --- 
+Ratio of cohort nan in section 0: 0.7200675388090926
+Ratio of cohort Netherlands in section 0: 0.08850277324473177
+Ratio of cohort Belgium in section 0: 0.02373964683689879
+Ratio of cohort Ireland in section 0: 0.02277523167406861
+Ratio of cohort UK in section 0: 0.0640708856750949
+Ratio of cohort Spain_Madrid in section 0: 0.011990538162273325
+Ratio of cohort US in section 0: 0.015674747687990938
+Ratio of cohort NYGC in section 0: 0.02140464802591541
+Ratio of cohort Spain_Barcelona in section 0: 0.004676974114082468
+Ratio of cohort Portugal in section 0: 0.002181836376867626
+Ratio of cohort Sweden in section 0: 0.007083100044501023
+Ratio of cohort Swiss in section 0: 0.0016712284466177453
+Ratio of cohort France in section 0: 0.009214176500175171
+Ratio of cohort Turkey in section 0: 0.0033456523303176866
+Ratio of cohort Israel in section 0: 0.00155126376056842
+Ratio of cohort Italy in section 0: 0.0020497583108035214
+
+ --- Section 1 --- 
+Ratio of cohort nan in section 1: 0.7212033446334376
+Ratio of cohort Netherlands in section 1: 0.08805618902018815
+Ratio of cohort Belgium in section 1: 0.02366127651856936
+Ratio of cohort Ireland in section 1: 0.02223577078160631
+Ratio of cohort UK in section 1: 0.06342116354270239
+Ratio of cohort Spain_Madrid in section 1: 0.012007695845946386
+Ratio of cohort US in section 1: 0.015465709825053589
+Ratio of cohort NYGC in section 1: 0.02157184650487984
+Ratio of cohort Spain_Barcelona in section 1: 0.004897733801230358
+Ratio of cohort Portugal in section 1: 0.0021992355352178855
+Ratio of cohort Sweden in section 1: 0.006956909810775942
+Ratio of cohort Swiss in section 1: 0.0017233596793053128
+Ratio of cohort France in section 1: 0.00935145659725669
+Ratio of cohort Turkey in section 1: 0.003561117506514706
+Ratio of cohort Israel in section 1: 0.0016194398234646765
+Ratio of cohort Italy in section 1: 0.0020677505738508468
+
+ --- Section 2 --- 
+Ratio of cohort nan in section 2: 0.7213031876773515
+Ratio of cohort Netherlands in section 2: 0.08812028822898939
+Ratio of cohort Belgium in section 2: 0.023457957524099637
+Ratio of cohort Ireland in section 2: 0.02194911918843525
+Ratio of cohort UK in section 2: 0.06292792349669121
+Ratio of cohort Spain_Madrid in section 2: 0.011891239178541154
+Ratio of cohort US in section 2: 0.015392794242208008
+Ratio of cohort NYGC in section 2: 0.02208012309932416
+Ratio of cohort Spain_Barcelona in section 2: 0.005006013287496243
+Ratio of cohort Portugal in section 2: 0.002108431569278645
+Ratio of cohort Sweden in section 2: 0.006980307375312197
+Ratio of cohort Swiss in section 2: 0.0018149227545239599
+Ratio of cohort France in section 2: 0.009443452246574512
+Ratio of cohort Turkey in section 2: 0.003806930124792141
+Ratio of cohort Israel in section 2: 0.0016780580336168349
+Ratio of cohort Italy in section 2: 0.0020392519727651806
+
+ --- Cohort <nan> --- 
+Ratio in section 0: 0.7200675388090926
+Ratio in section 1: 0.7212033446334376
+Ratio in section 2: 0.7213031876773515
+
+ --- Cohort <Netherlands> --- 
+Ratio in section 0: 0.08850277324473177
+Ratio in section 1: 0.08805618902018815
+Ratio in section 2: 0.08812028822898939
+
+ --- Cohort <Belgium> --- 
+Ratio in section 0: 0.02373964683689879
+Ratio in section 1: 0.02366127651856936
+Ratio in section 2: 0.023457957524099637
+
+ --- Cohort <Ireland> --- 
+Ratio in section 0: 0.02277523167406861
+Ratio in section 1: 0.02223577078160631
+Ratio in section 2: 0.02194911918843525
+
+ --- Cohort <UK> --- 
+Ratio in section 0: 0.0640708856750949
+Ratio in section 1: 0.06342116354270239
+Ratio in section 2: 0.06292792349669121
+
+ --- Cohort <Spain_Madrid> --- 
+Ratio in section 0: 0.011990538162273325
+Ratio in section 1: 0.012007695845946386
+Ratio in section 2: 0.011891239178541154
+
+ --- Cohort <US> --- 
+Ratio in section 0: 0.015674747687990938
+Ratio in section 1: 0.015465709825053589
+Ratio in section 2: 0.015392794242208008
+
+ --- Cohort <NYGC> --- 
+Ratio in section 0: 0.02140464802591541
+Ratio in section 1: 0.02157184650487984
+Ratio in section 2: 0.02208012309932416
+
+ --- Cohort <Spain_Barcelona> --- 
+Ratio in section 0: 0.004676974114082468
+Ratio in section 1: 0.004897733801230358
+Ratio in section 2: 0.005006013287496243
+
+ --- Cohort <Portugal> --- 
+Ratio in section 0: 0.002181836376867626
+Ratio in section 1: 0.0021992355352178855
+Ratio in section 2: 0.002108431569278645
+
+ --- Cohort <Sweden> --- 
+Ratio in section 0: 0.007083100044501023
+Ratio in section 1: 0.006956909810775942
+Ratio in section 2: 0.006980307375312197
+
+ --- Cohort <Swiss> --- 
+Ratio in section 0: 0.0016712284466177453
+Ratio in section 1: 0.0017233596793053128
+Ratio in section 2: 0.0018149227545239599
+
+ --- Cohort <France> --- 
+Ratio in section 0: 0.009214176500175171
+Ratio in section 1: 0.00935145659725669
+Ratio in section 2: 0.009443452246574512
+
+ --- Cohort <Turkey> --- 
+Ratio in section 0: 0.0033456523303176866
+Ratio in section 1: 0.003561117506514706
+Ratio in section 2: 0.003806930124792141
+
+ --- Cohort <Israel> --- 
+Ratio in section 0: 0.00155126376056842
+Ratio in section 1: 0.0016194398234646765
+Ratio in section 2: 0.0016780580336168349
+
+ --- Cohort <Italy> --- 
+Ratio in section 0: 0.0020497583108035214
+Ratio in section 1: 0.0020677505738508468
+Ratio in section 2: 0.0020392519727651806

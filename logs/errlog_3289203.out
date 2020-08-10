@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "jPCA/KPCA/SNPversion/kPCA_on_sim_matrix_NO_SCALING.py", line 11, in <module>
+    import jPCA_settings
+ModuleNotFoundError: No module named 'jPCA_settings'
+
+real	0m0.754s
+user	0m0.025s
+sys	0m0.018s

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "jPCA/KPCA/kPCA_on_sim_matrix.py", line 43, in <module>
+    X_kpca = kpca.fit_transform(scaled_df) #This is the scores matrix!
+  File "/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/sklearn/decomposition/_kernel_pca.py", line 306, in fit_transform
+    self.fit(X, **params)
+  File "/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/sklearn/decomposition/_kernel_pca.py", line 282, in fit
+    self._fit_transform(K)
+  File "/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/sklearn/decomposition/_kernel_pca.py", line 217, in _fit_transform
+    enable_warnings=False)
+  File "/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/sklearn/utils/validation.py", line 1175, in _check_psd_eigenvalues
+    % (-min_eig / max_eig))
+ValueError: There are significant negative eigenvalues (3.54676e-05 of the maximum positive). Either the matrix is not PSD, or there was an issue while computing the eigendecomposition of the matrix.
+
+real	0m5.085s
+user	0m1.466s
+sys	0m0.355s

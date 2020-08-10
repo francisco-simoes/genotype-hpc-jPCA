@@ -1,0 +1,15 @@
+NULL
+NULL
+[1] "before defining different_positive_count"
+[1] "before defining equal_positive_count"
+[1] "before defining GT0,1,2"
+[1] "before diff count computation"
+[1] "before equal count computation"
+[1] "Computation delta t:"
+Time difference of 9.863928 secs
+[1] "number of nas:"
+[1] 0
+[1] "number of non-nas:"
+[1] 253009
+[1] "nas have been cleaned. Writing file..."
+[1] "END"

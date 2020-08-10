@@ -1,0 +1,11 @@
+# of non-NA cohorts: 22214
+Cohort types: [nan 'Netherlands' 'Belgium' 'Ireland' 'UK' 'Spain_Madrid' 'US' 'NYGC'
+ 'Spain_Barcelona' 'Portugal' 'Sweden' 'Swiss' 'France' 'Turkey' 'Israel'
+ 'Italy'] 
+Total number of cohort types: 16
+
+Cohorts in section 0: {nan: 339365691, 'Netherlands': 41711094, 'Belgium': 11188425, 'Ireland': 10733899, 'UK': 30196418, 'Spain_Madrid': 5651105, 'US': 7387462, 'NYGC': 10087947, 'Spain_Barcelona': 2204244, 'Portugal': 1028293, 'Sweden': 3338244, 'Swiss': 787645, 'France': 4342614, 'Turkey': 1576796, 'Israel': 731106, 'Italy': 966045}
+
+Cohorts in section 1: {nan: 231469674, 'Netherlands': 28261568, 'Belgium': 7594069, 'Ireland': 7136554, 'UK': 20354975, 'Spain_Madrid': 3853861, 'US': 4963708, 'NYGC': 6923468, 'Spain_Barcelona': 1571924, 'Portugal': 705843, 'Sweden': 2232815, 'Swiss': 553111, 'France': 3001343, 'Turkey': 1142938, 'Israel': 519758, 'Italy': 663643}
+
+Cohorts in section 2: {nan: 104734501, 'Netherlands': 12795222, 'Belgium': 3406137, 'Ireland': 3187051, 'UK': 9137246, 'Spain_Madrid': 1726629, 'US': 2235061, 'NYGC': 3206073, 'Spain_Barcelona': 726882, 'Portugal': 306148, 'Sweden': 1013553, 'Swiss': 263530, 'France': 1371206, 'Turkey': 552773, 'Israel': 243657, 'Italy': 296103}
