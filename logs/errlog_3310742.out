@@ -1,6 +1,0 @@
-/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1272: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-
-real	3m7.661s
-user	0m2.640s
-sys	0m11.164s

@@ -1,8 +1,0 @@
-Read 1343816 items
-Retrieved genotypes for 6708 variants
-Warning message:
-In rvat::loadGT(gdb, var, SM = SM) : NAs introduced by coercion
-
-real	27m35.443s
-user	30m41.536s
-sys	3m2.812s

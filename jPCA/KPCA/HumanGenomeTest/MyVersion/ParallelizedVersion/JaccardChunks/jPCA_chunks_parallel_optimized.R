@@ -8,7 +8,7 @@ maxvar = minvar + chunksize - 1
 gdb="/hpc/hers_en/kkenna/rvat_tutorial/phase3_shapeit2_mvncall_integrated_v5a.20130502.gdb"
 gdb=RSQLite::dbConnect(RSQLite::dbDriver("SQLite"),gdb)
 print('before SM')
-SM <- RSQLite::dbGetQuery(gdb, "select * from postPCA")
+SM <- RSQLite::dbGetQuery(gdb, "select * from EUR")
 print('before var scan')
 #var=scan("VAR_id.txt") #Create txt with `echo "select VAR_id from exQCpass" | sqlite3 $gdb`
 var=scan("/hpc/hers_en/fsimoes/jPCA/KPCA/HumanGenomeTest/variants_shuffled.txt") 
@@ -23,9 +23,8 @@ GT$flipToMinor()
 # kick out everything except rare high call rate variants
 print('before filter')
 GT$smFilter(!is.na(GT$SM$IID) & GT$SM$pheno %in% c(0,1))
-#GT$varFilter(GT$af<=0.001 & GT$af>0 & GT$genoVar>0.7) #Rare variants.
-GT$varFilter(GT$af>0.01 & GT$af>0 & GT$genoVar>0.7) #Common variants.
-SM <- GT$SM
+# remove common variants (af>0.01) and singletons (af=1/(503*2)=0.0009940358)
+GT$varFilter(GT$af<=0.01 & GT$af>0.0009940358)
 # Get rid of NAs:
 print('before NA removal')
 #GT$missingToRef() #NAs turn to zeros.  for (i in 1:now(SM))
