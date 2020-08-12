@@ -1,5 +1,0 @@
-Read 1343816 items
-Retrieved genotypes for 6708 variants
-Warning message:
-In rvat::loadGT(gdb, var, SM = SM) : NAs introduced by coercion
-slurmstepd: error: *** JOB 3269674 ON n0084 CANCELLED AT 2020-08-05T14:43:51 ***

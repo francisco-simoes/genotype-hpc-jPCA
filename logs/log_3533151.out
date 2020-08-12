@@ -1,0 +1,42 @@
+START of jPCA/KPCA/HumanGenomeTest/MyVersion/ParallelizedVersion/kPCA_on_sim_matrix_NO_SCALING.py
+Similarity matrix shape: (503, 503)
+Matrix corner:
+[[1.         0.00220264 0.         0.00660793]
+ [0.00220264 1.         0.01214575 0.01574803]
+ [0.         0.01214575 1.         0.01006036]
+ [0.00660793 0.01574803 0.01006036 1.        ]]
+Data corner:
+   similarity_with_individual_0  ...  similarity_with_individual_3
+0                      1.000000  ...                      0.006608
+1                      0.002203  ...                      0.015748
+2                      0.000000  ...                      0.010060
+3                      0.006608  ...                      1.000000
+
+[4 rows x 4 columns]
+
+
+Data description:
+       similarity_with_individual_0  ...  similarity_with_individual_4
+count                    503.000000  ...                    503.000000
+mean                       0.005850  ...                      0.006162
+std                        0.044528  ...                      0.044515
+min                        0.000000  ...                      0.000000
+25%                        0.002144  ...                      0.002083
+50%                        0.002571  ...                      0.004098
+75%                        0.006173  ...                      0.006198
+max                        1.000000  ...                      1.000000
+
+[8 rows x 5 columns]
+X_kpca shape:  (503, 502)
+
+
+Scores (head):
+   PC1_score  PC2_score  PC3_score  ...  PC500_score  PC501_score  PC502_score
+0  -0.021386   0.017893   0.002261  ...     0.011405    -0.001446    -0.044044
+1  -0.020358   0.061489   0.009545  ...     0.002897     0.037780     0.048635
+2  -0.025936   0.074604  -0.006588  ...    -0.006041     0.111366    -0.047374
+3  -0.028925   0.088050  -0.012823  ...     0.055807    -0.023900     0.012100
+4  -0.023036   0.095393  -0.030660  ...    -0.034427    -0.011032     0.027447
+
+[5 rows x 502 columns]
+END of jPCA/KPCA/HumanGenomeTest/MyVersion/ParallelizedVersion/kPCA_on_sim_matrix_NO_SCALING.py

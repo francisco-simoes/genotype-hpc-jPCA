@@ -1,0 +1,270 @@
+[1] "Start of the Gram builder (R)"
+[1] "chunknumber:"
+[1] 50
+[1] "chunksize:"
+[1] 10000
+[1] "minvars length:"
+[1] 51
+[1] "minvars:"
+[[1]]
+[1] 1
+
+[[2]]
+[1] 10001
+
+[[3]]
+[1] 20001
+
+[[4]]
+[1] 30001
+
+[[5]]
+[1] 40001
+
+[[6]]
+[1] 50001
+
+[[7]]
+[1] 60001
+
+[[8]]
+[1] 70001
+
+[[9]]
+[1] 80001
+
+[[10]]
+[1] 90001
+
+[[11]]
+[1] 100001
+
+[[12]]
+[1] 110001
+
+[[13]]
+[1] 120001
+
+[[14]]
+[1] 130001
+
+[[15]]
+[1] 140001
+
+[[16]]
+[1] 150001
+
+[[17]]
+[1] 160001
+
+[[18]]
+[1] 170001
+
+[[19]]
+[1] 180001
+
+[[20]]
+[1] 190001
+
+[[21]]
+[1] 200001
+
+[[22]]
+[1] 210001
+
+[[23]]
+[1] 220001
+
+[[24]]
+[1] 230001
+
+[[25]]
+[1] 240001
+
+[[26]]
+[1] 250001
+
+[[27]]
+[1] 260001
+
+[[28]]
+[1] 270001
+
+[[29]]
+[1] 280001
+
+[[30]]
+[1] 290001
+
+[[31]]
+[1] 300001
+
+[[32]]
+[1] 310001
+
+[[33]]
+[1] 320001
+
+[[34]]
+[1] 330001
+
+[[35]]
+[1] 340001
+
+[[36]]
+[1] 350001
+
+[[37]]
+[1] 360001
+
+[[38]]
+[1] 370001
+
+[[39]]
+[1] 380001
+
+[[40]]
+[1] 390001
+
+[[41]]
+[1] 400001
+
+[[42]]
+[1] 410001
+
+[[43]]
+[1] 420001
+
+[[44]]
+[1] 430001
+
+[[45]]
+[1] 440001
+
+[[46]]
+[1] 450001
+
+[[47]]
+[1] 460001
+
+[[48]]
+[1] 470001
+
+[[49]]
+[1] 480001
+
+[[50]]
+[1] 490001
+
+[[51]]
+[1] 500001
+
+[1] "Current minvar:"
+[1] 1
+[1] "Current minvar:"
+[1] 10001
+[1] "Current minvar:"
+[1] 20001
+[1] "Current minvar:"
+[1] 30001
+[1] "Current minvar:"
+[1] 40001
+[1] "Current minvar:"
+[1] 50001
+[1] "Current minvar:"
+[1] 60001
+[1] "Current minvar:"
+[1] 70001
+[1] "Current minvar:"
+[1] 80001
+[1] "Current minvar:"
+[1] 90001
+[1] "Current minvar:"
+[1] 100001
+[1] "Current minvar:"
+[1] 110001
+[1] "Current minvar:"
+[1] 120001
+[1] "Current minvar:"
+[1] 130001
+[1] "Current minvar:"
+[1] 140001
+[1] "Current minvar:"
+[1] 150001
+[1] "Current minvar:"
+[1] 160001
+[1] "Current minvar:"
+[1] 170001
+[1] "Current minvar:"
+[1] 180001
+[1] "Current minvar:"
+[1] 190001
+[1] "Current minvar:"
+[1] 200001
+[1] "Current minvar:"
+[1] 210001
+[1] "Current minvar:"
+[1] 220001
+[1] "Current minvar:"
+[1] 230001
+[1] "Current minvar:"
+[1] 240001
+[1] "Current minvar:"
+[1] 250001
+[1] "Current minvar:"
+[1] 260001
+[1] "Current minvar:"
+[1] 270001
+[1] "Current minvar:"
+[1] 280001
+[1] "Current minvar:"
+[1] 290001
+[1] "Current minvar:"
+[1] 300001
+[1] "Current minvar:"
+[1] 310001
+[1] "Current minvar:"
+[1] 320001
+[1] "Current minvar:"
+[1] 330001
+[1] "Current minvar:"
+[1] 340001
+[1] "Current minvar:"
+[1] 350001
+[1] "Current minvar:"
+[1] 360001
+[1] "Current minvar:"
+[1] 370001
+[1] "Current minvar:"
+[1] 380001
+[1] "Current minvar:"
+[1] 390001
+[1] "Current minvar:"
+[1] 400001
+[1] "Current minvar:"
+[1] 410001
+[1] "Current minvar:"
+[1] 420001
+[1] "Current minvar:"
+[1] 430001
+[1] "Current minvar:"
+[1] 440001
+[1] "Current minvar:"
+[1] 450001
+[1] "Current minvar:"
+[1] 460001
+[1] "Current minvar:"
+[1] 470001
+[1] "Current minvar:"
+[1] 480001
+[1] "Current minvar:"
+[1] 490001
+[1] "Current minvar:"
+[1] 500001
+[1] "loop end"
+[1] "number of nas:"
+[1] 0
+[1] "number of non-nas:"
+[1] 253009
+[1] "nas have been cleaned. Writing file..."
+[1] "END of the Gram builder (R)"

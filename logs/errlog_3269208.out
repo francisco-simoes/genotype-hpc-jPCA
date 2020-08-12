@@ -1,5 +1,0 @@
-sbatch: error: Unable to open file execute_10.sh
-
-real	0m0.067s
-user	0m0.018s
-sys	0m0.011s

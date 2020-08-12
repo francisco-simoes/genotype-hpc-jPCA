@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "jPCA/KPCA/HumanGenomeTest/MyVersion/ParallelizedVersion/gram_heatmap.py", line 17, in <module>
+    GRAM = np.load('/hpc/hers_en/fsimoes/logs/objects/HumanGenomeTest/MyVersion/ParallelizedVersion/jaccard_gram_R_alternative_VAR.npy')
+  File "/home/hers_en/fsimoes/miniconda3/lib/python3.7/site-packages/numpy/lib/npyio.py", line 428, in load
+    fid = open(os_fspath(file), "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/hpc/hers_en/fsimoes/logs/objects/HumanGenomeTest/MyVersion/ParallelizedVersion/jaccard_gram_R_alternative_VAR.npy'
+
+real	0m4.021s
+user	0m0.599s
+sys	0m0.185s

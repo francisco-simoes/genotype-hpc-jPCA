@@ -1,5 +1,0 @@
-/hpc/hers_en/fsimoes/jPCA/KPCA/SNPversion/JaccardChunks/parallelizing_loop_optimized.sh: line 25: *  + 1: syntax error: operand expected (error token is "*  + 1")
-
-real	0m0.097s
-user	0m0.036s
-sys	0m0.014s

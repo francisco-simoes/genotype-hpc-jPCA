@@ -7,7 +7,8 @@ function round_up_division {
 }
 
 # Necessary variables
-totalvars=$(wc -l < /hpc/hers_en/fsimoes/jPCA/KPCA/HumanGenomeTest/variants_shuffled.txt)
+#totalvars=$(wc -l < /hpc/hers_en/fsimoes/jPCA/KPCA/HumanGenomeTest/variants_shuffled.txt)
+totalvars=500000 #Same as before - to compare with jacpop.
 chunksize=10000 #Chosen from experience.
 chunknumber=$(round_up_division $totalvars $chunksize ) 
 if [ $(($totalvars % $chunksize)) -ne 0 ] #when last chunk has less vars.

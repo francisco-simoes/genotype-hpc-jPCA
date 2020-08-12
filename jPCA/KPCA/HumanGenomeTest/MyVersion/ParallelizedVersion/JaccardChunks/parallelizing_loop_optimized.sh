@@ -22,7 +22,7 @@ do
 done
 
 # And now for the leftover vars (the last chunk):
-minvar=$(($chunknumber * $chunksize + 1))
+minvar=$((($chunknumber - 1) * $chunksize + 1))
 echo 'Last minvar:' $minvar
 sbatch --job-name=jaccard_chunks /hpc/hers_en/fsimoes/execute.sh /hpc/hers_en/shared/wxs/miniconda3/bin/Rscript /hpc/hers_en/fsimoes/jPCA/KPCA/HumanGenomeTest/MyVersion/ParallelizedVersion/JaccardChunks/jPCA_chunks_parallel_optimized.R $minvar $leftover
 

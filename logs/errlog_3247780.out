@@ -1,7 +1,0 @@
-Read 67943141 items
-/var/spool/slurm/d/job3247780/slurm_script: line 15:  7890 Killed                  $1 $2 $3 $4
-
-real	4m29.211s
-user	3m53.155s
-sys	0m35.052s
-slurmstepd: error: Detected 1 oom-kill event(s) in step 3247780.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

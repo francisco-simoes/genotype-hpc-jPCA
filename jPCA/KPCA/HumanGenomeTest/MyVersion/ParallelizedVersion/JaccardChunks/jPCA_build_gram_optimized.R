@@ -48,7 +48,7 @@ print(sum(!is.na(gram)))
 gram[is.na(gram)]=0
 print('nas have been cleaned. Writing file...')
 
-write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/HumanGenomeTest/MyVersion/ParallelizedVersion/jaccard_gram_R_alternative_VAR.txt",quote=F,sep="\t")
+write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/HumanGenomeTest/MyVersion/ParallelizedVersion/jaccard_gram.txt",quote=F,sep="\t")
 #write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R_common.txt",quote=F,sep="\t")
 #write.table(gram,file="/hpc/hers_en/fsimoes/logs/objects/jaccard_gram_R.txt",quote=F,sep="\t")
 print('END of the Gram builder (R)')
