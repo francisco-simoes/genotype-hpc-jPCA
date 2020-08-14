@@ -16,7 +16,7 @@ NAs_to_zeros(matrix_file, new_file_prefix, N) # Uncomment to create file with no
 # Import matrix to memory:
 MATRIX = get_matrix(new_file_prefix, N)
 
-# Do NOT round values to nearest integers:
+# Round values to nearest integers:
 #MATRIX = np.rint(MATRIX)
 
 # Save matrix as .npy file:
